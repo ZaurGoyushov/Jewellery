@@ -7,4 +7,3 @@ app.config['SECRET_KEY']='Jewell'
 db = SQLAlchemy(app)
 bcrypt=Bcrypt(app)
 from .Dashboard import routes
-
