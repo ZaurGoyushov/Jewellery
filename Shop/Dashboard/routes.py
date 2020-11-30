@@ -35,3 +35,9 @@ def login():
          else:
           flash('Wrong Password try again','danger')      
      return render_template('admin/login.html', form=form,title='login page')
+
+
+
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+    return render_template('admin/admin.html')

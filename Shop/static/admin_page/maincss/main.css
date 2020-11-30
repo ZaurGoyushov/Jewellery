@@ -1,0 +1,420 @@
+    /*general style*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    
+}
+#header{
+    width: 100%;
+    height: 550px;
+    position: relative;
+  
+    }
+         /*Slider style*/
+ 
+.top_S{
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+.top{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    
+}
+.slider{
+    position: absolute;
+    width: 400%;
+    left: 0;
+    animation: slide 20s linear infinite;
+}   
+.slider_item{
+width: 25%;
+}
+.slider_item img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.slider:hover{
+   animation-play-state: paused;
+   cursor: pointer;
+}
+@keyframes slide{
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    100%{
+        left: -300%;
+    }
+}
+         
+          /*Main nav style*/
+
+ .top_Nav{
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+.top_Nav:hover{
+    background-color: black;
+    }
+ 
+            /*logo side*/
+.logo{
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    
+}
+.logo img{
+    object-fit: cover;
+    width: 100%;
+    opacity:0.3;
+    height: 120px; 
+       
+}
+.logo a{
+    font-size: 24px;
+    color: white;
+    display: block;   
+}
+
+        /*mega menu side*/
+.menu{
+       width: 100%;
+       box-sizing: border-box;      
+}
+
+.menu > ul{
+    width: 100%;
+    position: relative;
+    height: 120px;   
+}
+.menu > ul >li{
+    margin-left: 10px;
+}
+
+.menu > ul >li span{
+    margin-left:11px;
+    font-size: 100%;
+}
+.menu > ul > li > a{
+font-size: 15px;
+color: white;
+letter-spacing: 0.5px;
+cursor: pointer;
+}
+.menu > ul > li:first-of-type a{
+    color:#d2aa5c ;
+}
+.menu > ul > li:last-of-type{
+    position: relative; 
+}
+.menu ul li a:hover{
+    color:#d2aa5c ;
+    transition: 0.5s;
+    
+}
+/*mega menu collection side*/
+ 
+.mega_subm {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    flex-wrap: wrap;
+    transform: scaleY(0);
+    transform-origin: top;
+   
+   
+    
+}
+.mega_subm > ul {
+    width: 100%;
+}
+.mega_subm h3{
+    color: #d2aa5c;
+    font-size: 15px;
+    text-transform: uppercase;
+    left: 10px;
+    text-align: center;
+    margin:30px;
+}
+
+.mega_subm ul li{
+    margin:14px 0;
+    text-align: center;
+
+}
+.mega_subm ul li a{
+    color: black;
+}
+.menu > ul > li:hover .mega_subm{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: all 1s ease;
+     
+ }
+    /*mega menu jewel side*/
+ .sub_menu_img{
+     width: 95%;
+     height: 250px;
+     box-sizing: border-box;
+     padding: 10px 10px;
+ }
+ .sub_menu_img img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     border: 1px solid grey;
+ }
+         /*mega menu rings side*/
+
+  .ring{
+      width: 95%;
+      height: 200px;
+      padding: 20px 5px 10px 5px;
+  }
+  .ring img{
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      
+  }
+  .ring h1{
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+
+        /*mega menu necklace side*/
+  .necklace{
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 25px 10px;
+    margin-right: 10px;
+    
+  }
+  .necklace img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid grey;
+  }
+      /*mega menu pages side*/
+  .page{
+      position: absolute;
+      box-sizing: border-box;
+      left:0;
+      width: 160px;
+      padding: 10px 0;
+      background-color: white;
+      transform: scaleY(0);
+      transform-origin: top;
+  }
+  .page > li{
+      padding: 10px 10px;
+      transition:all 1s;
+  }
+  .menu > ul > li:hover .page{
+      transform: scaleY(1);
+      transition: all 1s ease;
+          
+  }
+  .page > li > a{
+      color: black;
+      text-align: center;
+  }
+  .page > li > a:hover{
+      color:#d2aa5c ;
+      text-decoration: underline;  
+  }
+
+ 
+
+            /*user basket search side*/
+              
+.search{
+    width: 100%;
+    box-sizing: border-box;
+}
+.search > ul{
+height: 120px;
+justify-content:flex-end;
+margin-right: 15px;
+
+
+}
+.search > ul > li{
+    margin-right: 10px;
+    box-sizing: border-box; 
+}
+.search > ul > li span{
+    margin-left: 10px;
+}
+.search > ul > li > a{
+    font-size: 18px;
+    color: white;
+}
+.search > ul > li a:hover{
+    color: #d2aa5c;  
+}
+.search > ul > li:hover .counter{
+    background-color: black; 
+    color: white;
+}
+.search > ul > li{
+    position: relative;
+}   
+
+         /*basket*/
+.counter{
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    background-color:#d2aa5c ;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 10px;
+    color: white;
+}
+.choosen{
+    position: absolute;
+    width: 320px;
+    background-color: white;
+    right:0;
+    padding:10px 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.choosen p{
+    text-align: start;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.search > ul > li:hover .choosen{
+    transform: scaleX(1);
+    transition: 0.7s;
+}
+
+     /*search*/
+
+.src{
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    right:0;
+    transform: scaleX(0);
+    transform-origin: right;
+    justify-content: end;
+}
+.src input[type='search']{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; 
+}
+
+.search > ul > li:hover .src{
+    transform: scaleX(1);
+    transition: 0.7s;
+}
+              /*money*/
+.money{
+    position: absolute;
+    width: 70px;
+    background-color:white;
+    transform: scaleY(0);
+    transform-origin: top; 
+}
+.money > li{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+
+}
+.money > li > a{
+    color:black;
+    font-size: 18px ;
+    
+}
+.search > ul > li:hover .money{
+  transform: scaleY(1);
+  transition: 0.5s;
+}
+ .money >li:hover{
+   background-color: blue;
+   transition: 0.5s;
+  }
+          /*user*/
+
+.user{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+   
+}
+.user > li{
+     padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+.user > li > a{
+    color: black;  
+}
+.search > ul > li:hover .user{
+    transform: scaleX(1);
+    transition: 0.5s;
+}
+#sub_page{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: white;
+    transform: scaleX(0.5);
+    transform-origin: left;
+}
+#header:hover #sub_page{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+    
