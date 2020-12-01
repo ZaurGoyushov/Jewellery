@@ -40,5 +40,14 @@ def login():
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
+
+    return render_template('/admin.html')
+
+
+
+@app.route('/admin/users', methods=['GET', 'POST'])
+def users():
     user_info=User.query.all()
-    return render_template('admin/admin.html', users=user_info)
+
+    return render_template('admin/user.html', table_info = user_info ,title='Users')
+    
