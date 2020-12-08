@@ -7,6 +7,10 @@ import os
 @app.route("/")
 def home():
     return render_template('admin/index.html')
+
+@app.route("/header")
+def header():
+    return render_template('sections/header.html')
          
 
 @app.route('/register', methods=['GET', 'POST'])
