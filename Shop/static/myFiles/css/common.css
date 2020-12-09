@@ -1,12 +1,13 @@
 /*  Grid System */
-.container {
+.cont {
     width: 1320px;
     margin: 0 auto;
 }
 
-.container-full {
+.cont-fluid {
     width: 30%;
     color:red;
+    background-color: green;
     
 
 }
