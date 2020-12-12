@@ -10,7 +10,7 @@ def home():
 
 @app.route("/header")
 def header():
-    return render_template('sections/header.html')
+    return render_template('home/header.html')
          
 
 @app.route('/register', methods=['GET', 'POST'])
