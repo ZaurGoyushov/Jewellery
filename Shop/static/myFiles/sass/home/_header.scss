@@ -67,7 +67,7 @@
             &:hover{
                     background-color: #6c757d!important;
                     .menu > ul >li {
-                                    background-color: lightblue;
+                                    background-color: white;
                                     border: 1px solid green;
                                     border-radius:40px ;
                                     padding: 5px;
@@ -84,7 +84,7 @@
         box-sizing: border-box;
         z-index:100;
         border-radius: 40px;
-        border:1px solid green;
+        border:2px solid green;
         img{
             object-fit: cover;
             width: 80%;
@@ -136,7 +136,7 @@
                     position: absolute;
                     width: 100%;
                     left: 0;
-                    background-color: lightblue;
+                    background-color: white;
                     flex-wrap: wrap;
                     transform: scaleY(0);
                     transform-origin: top;

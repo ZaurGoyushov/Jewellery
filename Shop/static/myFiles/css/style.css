@@ -162,6 +162,10 @@ body {
   position: absolute;
 }
 
+.m-t {
+  margin: 10px 0;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +316,7 @@ body {
 }
 
 #header .top_Nav:hover .menu > ul > li {
-  background-color: lightblue;
+  background-color: white;
   border: 1px solid green;
   border-radius: 40px;
   padding: 5px;
@@ -330,7 +334,7 @@ body {
           box-sizing: border-box;
   z-index: 100;
   border-radius: 40px;
-  border: 1px solid green;
+  border: 2px solid green;
 }
 
 #header .top_Nav .logo img {
@@ -394,7 +398,7 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  background-color: lightblue;
+  background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-transform: scaleY(0);
