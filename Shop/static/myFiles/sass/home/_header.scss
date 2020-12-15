@@ -64,7 +64,6 @@
             position: fixed;
             z-index: 2;
             box-sizing: border-box;
-            
             &:hover{
                     background-color: #6c757d!important;
                     .menu > ul >li {
@@ -166,10 +165,11 @@
                         }
                     }
                     .ring{
-                        width: 110%;
+                        width: 100%;
                         padding: 20px 5px 10px 5px;
+                        box-sizing: border-box;
                         img{
-                            width: 100%;
+                            width: 110%;
                             height: 180px;
                             object-fit: cover;
                             margin-top:20px;

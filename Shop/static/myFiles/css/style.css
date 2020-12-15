@@ -442,12 +442,14 @@ body {
 }
 
 #header .menu > ul > li .mega_subm .ring {
-  width: 110%;
+  width: 100%;
   padding: 20px 5px 10px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #header .menu > ul > li .mega_subm .ring img {
-  width: 100%;
+  width: 110%;
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
