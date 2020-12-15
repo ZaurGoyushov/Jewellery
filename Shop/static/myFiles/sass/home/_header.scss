@@ -61,9 +61,10 @@
     .top_Nav{
             width: 100%;
             background-color: transparent;
-            position: absolute;
+            position: fixed;
             z-index: 2;
             box-sizing: border-box;
+            
             &:hover{
                     background-color: #6c757d!important;
                     .menu > ul >li {
@@ -79,24 +80,15 @@
                     }
     .logo{
         position: absolute;
-        width: 70%;
+        width: 100%;
         padding: 5px 20px;
         box-sizing: border-box;
         z-index:100;
-        border-radius: 40px;
-        border:2px solid green;
         img{
-            object-fit: cover;
-            width: 80%;
-            height: 120px;       
-        }
-        
-        a{
-            font-size: 24px;
-            color: gold;
-            display: block;   
-        }
-        
+            width:50%;
+            height: 80px; 
+            font-weight: 800;     
+        }     
     }
     }
     .menu  {

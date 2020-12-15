@@ -8,9 +8,9 @@ import os
 def home():
     return render_template('admin/index.html')
 
-@app.route("/header")
+@app.route("/body")
 def header():
-    return render_template('home/header.html')
+    return render_template('home/body.html')
          
 
 @app.route('/register', methods=['GET', 'POST'])

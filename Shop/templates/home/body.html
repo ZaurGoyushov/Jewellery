@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section id="main-section">
+<div class="container-ow ">
+    <div class="row-ow flex ">
+        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main1.jpg')}}" alt=""></div></div>
+        <div class="col-ow-3">
+            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+            <h2><a href="#">Just Launched</a></h2>
+            <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+        </div>
+       </div>
+        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main2.jpg')}}" alt=""></div></div>
+        <div class="col-ow-3">
+            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                <h2><a href="#">Best Summer Sale</a></h2>
+                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row-ow flex">
+        <div class="col-ow-3">
+            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                <h2><a href="#">Necklaces</a></h2>
+                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main3.jpg')}}" alt=""></div></div>
+        <div class="col-ow-3">
+            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                <h2><a href="#">Diamond Chain</a></h2>
+                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+            </div>
+            
+        </div>
+        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main4.jpg')}}" alt=""></div></div>
+    </div>
+</div>
+
+    
+</section>
+
+
+
+
+
+
+
+
+{% endblock content %}
