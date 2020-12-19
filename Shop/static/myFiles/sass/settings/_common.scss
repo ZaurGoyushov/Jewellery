@@ -1,21 +1,23 @@
-.boxSz_BorBox{
+.boxSz_BorBox {
     box-sizing: border-box;
 }
 
-.display_block{
-        display: block;
- }
-.active {
-    color:$main-color-gold;
+.display_block {
+    display: block;
 }
-.position-rel{
+.active {
+    color: $main-color-gold;
+}
+.position-rel {
     position: relative;
 }
-.position-abs{
+.position-abs {
     position: absolute;
 }
 
-.box{
+.box {
     overflow: hidden;
 }
-
+.border{
+    border: 1px solid red;
+}

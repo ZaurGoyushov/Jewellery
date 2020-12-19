@@ -1,335 +1,397 @@
-#header{
+#header {
     width: $main-widht;
     height: $header-height;
-    .top_S{
+
+    /*Slider codes*/
+    .top_S {
         width: $main-widht;
         z-index: 1;
-        .top{
+
+        .top {
             width: $main-widht;
             height: $header-height;
             overflow: hidden;
-            .slider{
-                width:$main-widht-4x;
+
+            .slider {
+                width: $main-widht-4x;
                 left: 0;
                 animation: slide 20s linear infinite;
-                .slider_item{
+
+                .slider_item {
                     width: $main-widht/4;
-                    img{
+
+                    img {
                         width: $main-widht;
                         height: $header-height;
                         object-fit: cover;
                     }
                 }
-            &:hover{
-                animation-play-state: paused;
-                cursor: pointer;
+
+                &:hover {
+                    animation-play-state: paused;
+                    cursor: pointer;
                 }
             }
-            
         }
     }
- @keyframes slide{
-    0%{
-        left:0;
+
+    @keyframes slide {
+        0% {
+            left: 0;
+        }
+
+        20% {
+            left: 0;
+        }
+
+        25% {
+            left: -$main-widht;
+        }
+
+        45% {
+            left: -$main-widht;
+        }
+
+        50% {
+            left: -200%;
+        }
+
+        70% {
+            left: -200%;
+        }
+
+        75% {
+            left: -300%;
+        }
+
+        100% {
+            left: -300%;
+        }
     }
-    20%{
-        left:0;
-    }
-    25%{
-        left:-$main-widht;
-    }
-    45%{
-        left:-$main-widht;
-    }
-    50%{
-        left:-200%;
-    }
-    70%{
-        left: -200%;
-    }
-    75%{
-        left: -300%;
-    }
-    100%{
-        left: -300%;
-    }
- }
-    .top_Nav{
+
+    /*Naviqation codes*/
+    .top_Nav {
+        width: $main-widht;
+        background-color: transparent;
+        position: fixed;
+        z-index: 2;
+
+        /*hover action*/
+        &:hover {
+            background-color: $main-color-darkblue;
+
+            .menu > ul > li {
+                background-color: $main-color-white;
+                border-radius: 40px;
+                padding: 5px;
+            }
+
+            .menu > ul > li > a {
+                color: $main-color-black;
+            }
+
+            .logo > a > font {
+                color: $main-color-white !important;
+            }
+        }
+
+        /*logo codes*/
+        .logo {
             width: $main-widht;
-            background-color: transparent;
-            position: fixed;
-            z-index: 2;
-            &:hover{
-                    background-color: $main-color-darkblue;
-                    .menu > ul >li {
-                                    background-color:$main-color-white;
-                                    border-radius:40px ;
-                                    padding: 5px;
+            padding: 5px 20px;
+            z-index: 100;
+
+            a {
+                font-size: $font-size * 5;
+            }
+        }
+
+        /*menu codes*/
+        .menu {
+            width: $main-widht;
+
+            & > ul {
+                width: $main-widht;
+                height: calc(#{$header-height}/ 5 + 10px);
+
+                & > li {
+                    margin-left: 10px;
+
+                    &:hover {
+                        .mega_subm {
+                            transform: scaleY(1);
+                            transform-origin: bottom;
+                            transition: all 1s ease;
+                            top: 75px;
+                        }
+
+                        .page {
+                            transform: scaleY(1);
+                            transition: all 1s ease;
+                        }
                     }
-                    .menu > ul >li>a{
-                                    color:$main-color-black;  
-                                    }
-     
+
+                    & > a {
+                        font-size: calc(#{$font-size * 4} + 1px);
+                        color: $main-color-white;
+                        letter-spacing: 0.5px;
+                        cursor: pointer;
+
+                        & > span {
+                            margin-left: 5px;
+                        }
                     }
-    .logo{
-        width: $main-widht;
-        padding: 5px 20px;
-        z-index:100;
-        img{
-            width:$main-widht/2;
-            height: calc(#{$header-height/8}+12px ); 
-            font-weight: 800;     
-        }     
-    }
-    }
-    .menu  {
-        width: $main-widht;
-        & > ul {
-           width: $main-widht;
-           height:120px;
-           & >  li{
-                   margin-left: 10px; 
-                   &:hover{
-                             .mega_subm{
-                                         transform: scaleY(1);
-                                         transform-origin: bottom;
-                                         transition: all 1s ease;
-                                         top:75px;
-                              }
-                               .page{
-                                transform: scaleY(1);
-                                transition: all 1s ease;
-                                
-                                    
-                            }
-                   }             
-                   & > a{
-                         font-size:calc(#{$font-size*4} + 1px);
-                         color: $main-color-white;
-                         letter-spacing: 0.5px;
-                         cursor: pointer;
-                         & > span{
-                                   margin-left:5px;
-                    
-                         }
-                   } 
-                   .mega_subm {
-                    width: $main-widht;
-                    left: 0;
-                    background-color:$main-color-white;
-                    flex-wrap: wrap;
-                    transform: scaleY(0);
-                    transform-origin: top;
-                    max-height: 475px;
-                    h3{
-                        color:$main-color-gold ;
-                        font-size: $font-size*3;
-                        font-weight: 900;
-                        text-transform: uppercase;
-                        text-align: center;
-                        margin:30px;
-                    }
-                     ul {
+
+                    .mega_subm {
                         width: $main-widht;
-                        li{
-                            margin:14px 0;
-                            text-align: center;
-                            a{
-                                color:$main-color-gray;
-                            }
-                        
-                        }
-                        
-                    }
-                    .sub_menu_img{
-                        width: 95%;
-                        height: 250px;
-                        padding: 10px 10px;
-                        img{
-                            width: $main-widht;
-                            height: 200px;
-                            object-fit: cover;
-                            border: 1px solid grey;
-                        }
-                    }
-                    .ring{
-                        width: $main-widht;
-                        padding: 20px 5px 10px 5px;
-                        img{
-                            width: 110%;
-                            height: 180px;
-                            object-fit: cover;
-                            margin-top:20px;
-                            
-                        }
-                        h1{
-                            font-size: $font-size*5;
-                            color:$main-color-gold;
+                        left: 0;
+                        background-color: $main-color-white;
+                        flex-wrap: wrap;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        max-height: $header-height;
+
+                        h3 {
+                            color: $main-color-gold;
+                            font-size: $font-size * 3;
                             font-weight: 900;
-                            letter-spacing: 1px;
                             text-transform: uppercase;
+                            text-align: center;
+                            margin: 30px;
                         }
-                    } 
-                    .necklace{
-                        width: $main-widht;
-                        height: 300px;                       
-                        padding: 25px 10px;
-                        margin-right: 10px;
-                        img{
+
+                        ul {
                             width: $main-widht;
-                            height: 200px;
-                            object-fit: cover;
-                            border: 1px solid $main-color-gray;
-                          }
-                        
-                      }  
-                    } 
-                    .page{
-                        left:0;
-                        top:30px;
+
+                            li {
+                                margin: 14px 0;
+                                text-align: center;
+
+                                a {
+                                    color: $main-color-gray;
+                                }
+                            }
+                        }
+
+                        .sub_menu_img {
+                            width: 95%;
+                            height: 250px;
+                            padding: 10px 10px;
+
+                            img {
+                                width: $main-widht;
+                                height: 200px;
+                                object-fit: cover;
+                                border: 1px solid grey;
+                            }
+                        }
+
+                        .ring {
+                            width: $main-widht;
+                            padding: 20px 5px 10px 5px;
+
+                            img {
+                                width: 110%;
+                                height: 180px;
+                                object-fit: cover;
+                                margin-top: 20px;
+                            }
+
+                            h1 {
+                                font-size: $font-size * 5;
+                                color: $main-color-gold;
+                                font-weight: 900;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        .necklace {
+                            width: $main-widht;
+                            height: 300px;
+                            padding: 25px 10px;
+                            margin-right: 10px;
+
+                            img {
+                                width: $main-widht;
+                                height: 200px;
+                                object-fit: cover;
+                                border: 1px solid $main-color-gray;
+                            }
+                        }
+                    }
+
+                    .page {
+                        left: 0;
+                        top: 30px;
                         width: 160px;
                         padding: 10px 0;
                         background-color: $main-color-white;
                         transform: scaleY(0);
                         transform-origin: top;
-                        li{
-                          padding: 10px 10px;
-                          transition:all 1s;
-                          a{
-                              color:$main-color-black;
-                              text-align: center;
-                              &:hover{
-                                  color:$main-color-gold;
-                                  text-decoration: underline;  
-                              }
-                          }
+
+                        li {
+                            padding: 10px 10px;
+                            transition: all 1s;
+
+                            a {
+                                color: $main-color-black;
+                                text-align: center;
+
+                                &:hover {
+                                    color: $main-color-gold;
+                                    text-decoration: underline;
+                                }
+                            }
                         }
-                    }   
-                }   
+                    }
+                }
+            }
+
+            a:hover {
+                color: $main-color-gold;
+                transition: 0.5s;
+            }
         }
-        a:hover{
-            color:$main-color-gold ;
-            transition: 0.5s;
-            
-        }      
-    } 
-    .search{
-        width: $main-widht;
-        & > ul{
-            height: 120px;
-            justify-content:flex-end;
-            margin-right: 15px;
-            & >li{
-                margin-right: 10px;
-                &:hover{
-                    .counter{
-                        background-color: $main-color-black; 
+
+        /*search/basket/users/money codes*/
+        .search {
+            width: $main-widht;
+
+            & > ul {
+                height: 120px;
+                justify-content: flex-end;
+                margin-right: 15px;
+
+                & > li {
+                    margin-right: 10px;
+
+                    &:hover {
+                        .counter {
+                            background-color: $main-color-black;
+                            color: $main-color-white;
+                        }
+
+                        .choosen {
+                            transform: scaleX(1);
+                            transition: 0.7s;
+                        }
+
+                        .src {
+                            transform: scaleX(1);
+                            transition: 0.7s;
+                        }
+
+                        .money {
+                            transform: scaleY(1);
+                            transition: 0.5s;
+                        }
+
+                        .user {
+                            transform: scaleX(1);
+                            transition: 0.5s;
+                        }
+                    }
+
+                    span {
+                        margin-left: 10px;
+                    }
+
+                    & > a {
+                        font-size: calc(#{$font-size * 4} + 2px);
                         color: $main-color-white;
-                      }
-                      .choosen{
-                        transform: scaleX(1);
-                        transition: 0.7s;
-                      }
-                      .src{
-                        transform: scaleX(1);
-                        transition: 0.7s;
-                      }
-                      .money{
-                        transform: scaleY(1);
-                        transition: 0.5s;
-                      }
-                      .user{
-                        transform: scaleX(1);
-                        transition: 0.5s;
+
+                        &:hover {
+                            color: $main-color-gold;
+                        }
                     }
-    
                 }
-                span{
+            }
+
+            .counter {
+                display: block;
+                top: -10px;
+                left: 5px;
+                background-color: $main-color-gold;
+                border-radius: 50%;
+                padding: 3px;
+                font-size: calc(#{$font-size * 2} + 2px);
+                color: $main-color-white;
+            }
+
+            .choosen {
+                width: 230px;
+                background-color: $main-color-white;
+                right: 0;
+                padding: 10px 5px;
+                transform: scaleX(0);
+                transform-origin: right;
+
+                p {
+                    text-align: start;
+                    font-size: calc(#{$font-size * 3}+1px);
                     margin-left: 10px;
-                } 
-                & > a {
-                    font-size: calc(#{$font-size*4} + 2px);
-                    color: $main-color-white;
-                    &:hover{
-                        color: $main-color-gold;  
+                }
+            }
+
+            .src {
+                width: 250px;
+                background-color: $main-color-white;
+                right: 0;
+                transform: scaleX(0);
+                transform-origin: right;
+                justify-content: end;
+
+                input {
+                    width: $main-widht;
+                    padding: 10px;
+                }
+            }
+
+            .money {
+                width: 70px;
+                background-color: $main-color-white;
+                transform: scaleY(0);
+                transform-origin: top;
+
+                li {
+                    padding: 10px 0;
+                    width: $main-widht;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: $main-color-darkblue;
+                        transition: 0.5s;
+                    }
+
+                    a {
+                        color: $main-color-black;
+                        font-size: calc(#{$font-size * 4} + 2px);
                     }
                 }
             }
-        }
-        .counter{
-            display: block;
-            top: -10px;
-            left: 5px;
-            background-color:$main-color-gold ;
-            border-radius: 50%;
-            padding: 3px;
-            font-size: calc(#{$font-size*2} + 2px);
-            color: $main-color-white;
-        }
-        .choosen{
-            width: 230px;
-            background-color: $main-color-white;
-            right:0;
-            padding:10px 5px;
-            transform: scaleX(0);
-            transform-origin: right;
-            p{
-                text-align: start;
-                font-size: calc(#{$font-size*3}+1px);
-                margin-left: 10px;
-            }
-        }
-        .src{
-            width: 250px;
-            background-color: $main-color-white;
-            right:0;
-            transform: scaleX(0);
-            transform-origin: right;
-            justify-content: end;
-            input{
-                width: $main-widht;
-                padding: 10px; 
-            }
-        }
-        .money{
-            width: 70px;
-            background-color:$main-color-white;
-            transform: scaleY(0);
-            transform-origin: top;
-            li{
-                padding: 10px 0;
-                width: $main-widht;
-                text-align: center;
-                &:hover{
-                    background-color: $main-color-darkblue;
-                    transition: 0.5s;
-                   }
-                a{
-                    color:$main-color-black;
-                    font-size:calc(#{$font-size*4} + 2px);
-                    
+
+            .user {
+                width: 200px;
+                right: 0;
+                background-color: $main-color-white;
+                transform: scaleX(0);
+                transform-origin: right;
+
+                li {
+                    padding: 10px;
+                    margin: 5px;
+
+                    a {
+                        color: $main-color-black;
+
+                        &:hover {
+                            color: $main-color-gold;
+                            transition: all 1s ease;
+                        }
+                    }
                 }
-            
-            } 
-        }
-        .user{
-            width:200px;
-            right: 0;
-            background-color: $main-color-white;
-            transform: scaleX(0);
-            transform-origin: right;
-            li{
-                padding: 10px;
-               margin: 5px;
-               a{
-                color: $main-color-black; 
-                &:hover{
-                    color:$main-color-gold;
-                    transition: all 1s ease;
-                } 
             }
-           }
-           
         }
     }
-}   
+}

@@ -1,45 +1,189 @@
-#main-section{
-    width:$main-widht;
-    img{
-        width:$main-widht;
-        height:$main-height;
-        &:hover{
+#main-section {
+    width: $main-widht;
+    img {
+        width: $main-widht;
+        height: $main-height;
+        &:hover {
             transform: scale(1.5);
-            
         }
-       
     }
-    .collection-info{
-        width:$main-widht;
-        height:$main-height;
-        background-color:$main-color-black;
-        &:hover{
-            background-color:$main-color-gold;
-           
+    .collection-info {
+        width: $main-widht;
+        height: $main-height;
+        background-color: $main-color-black;
+        &:hover {
+            background-color: $main-color-gold;
         }
-        
-        h2{
-            padding:5px;
-            margin-bottom:15px;
-            text-align: center;
-            a{
-                font-size:$font-size*10;
-                color:$main-color-white;
-                
 
+        h2 {
+            padding: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            a {
+                font-size: $font-size * 10;
+                color: $main-color-white;
             }
         }
-        & > a{
-            background-color:$main-color-gold;
-            color:$main-color-white;
-            .fa{
-                font-size: calc(#{$font-size*4} + 1px);
-                color:$main-color-white;
-                padding:4px;
+        & > a {
+            background-color: $main-color-gold;
+            color: $main-color-white;
+            .fa {
+                font-size: calc(#{$font-size * 4} + 1px);
+                color: $main-color-white;
+                padding: 4px;
                 margin-bottom: 5px;
             }
-
+        }
+    }
+}
+#newArr {
+    width: $main-widht;
+    .newArr_head {
+        width: $main-widht;
+        height: $main-height/2;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        h1 {
+            font-size: $font-size * 13;
+            margin: 20px 0;
+        }
+    }
+    .left-item {
+        width: $main-widht;
+        min-height: $main-height;
+        box-sizing: border-box;
+        position: relative;
+        .left-overlay {
+            width: $main-widht;
+            height: $main-height/1.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: all 0.5s;
+            cursor: pointer;
+            i {
+                background-color: darken($main-color-white, 10);
+                margin: 2px;
+                padding: 10px;
+            }
+        }
+        &:hover {
+            .item-detail a {
+                color: $main-color-gold;
+            }
+        }
+        .img-frame {
+            img {
+                width: $main-widht;
+                height: $main-height/1.5;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            &:hover {
+                .left-overlay {
+                    transform: scaleY(1);
+                    transform-origin: bottom;
+                    transform: scaleY(1);
+                    transform-origin: top;
+                }
+            }
+        }
+        .item-detail {
+            cursor: pointer;
+            a,
+            p {
+                color: $main-color-black;
+                margin: 5px;
+            }
+            span {
+                color: lighten($main-color-black, 70);
+                margin: 5px;
+            }
+            .stars {
+                & > span {
+                    color: $main-color-black;
+                    margin: 0px;
+                }
+            }
         }
     }
 
+    .right-item {
+        width: $main-widht;
+        margin: 10px;
+        &:hover {
+            .item-detail a {
+                color: $main-color-gold;
+            }
+        }
+        .img-frame {
+            position: relative;
+            &:hover {
+                .right-overlay {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    transform: scaleX(1);
+                    transform-origin: right;
+                    transition: all 0.5s ease;
+                }
+            }
+            img {
+                width: $main-widht;
+                height: $main-height * 1.5;
+                object-fit: cover;
+            }
+            .right-overlay {
+                width: $main-widht;
+                height: $main-height/1.5;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0.5);
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: all 0.5s ease;
+
+                cursor: pointer;
+            }
+        }
+        .item-detail {
+            cursor: pointer;
+            a,
+            p {
+                color: $main-color-black;
+                margin: 5px;
+            }
+            span {
+                color: lighten($main-color-black, 70);
+                margin: 5px;
+            }
+            .stars {
+                & > span {
+                    color: $main-color-black;
+                    margin: 0px;
+                }
+            }
+        }
+        .detail-right {
+            margin-top: 10px;
+            cursor: pointer;
+            i {
+                font-size: $font-size * 10;
+            }
+        }
+    }
+    .foot_item {
+        width: $main-widht;
+        height: $main-height;
+        box-sizing: border-box;
+        position: relative;
+        img {
+            width: $main-widht;
+            height: $main-height;
+            object-fit: cover;
+        }
+    }
 }

@@ -3,51 +3,297 @@
 {% block content %}
 
 <section id="main-section">
-<div class="container-ow ">
-    <div class="row-ow flex ">
-        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main1.jpg')}}" alt=""></div></div>
-        <div class="col-ow-3">
-            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
-            <h2><a href="#">Just Launched</a></h2>
-            <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
-        </div>
-       </div>
-        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main2.jpg')}}" alt=""></div></div>
-        <div class="col-ow-3">
-            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
-                <h2><a href="#">Best Summer Sale</a></h2>
-                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+    <div class="container-ow ">
+        <div class="row-ow flex ">
+            <div class="col-ow-3">
+                <div class="box"><img src="{{url_for('static', filename='images/main1.jpg')}}" alt=""></div>
+            </div>
+            <div class="col-ow-3">
+                <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                    <h2><a href="#">Just Launched</a></h2>
+                    <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-ow-3">
+                <div class="box"><img src="{{url_for('static', filename='images/main2.jpg')}}" alt=""></div>
+            </div>
+            <div class="col-ow-3">
+                <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                    <h2><a href="#">Best Summer Sale</a></h2>
+                    <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row-ow flex">
-        <div class="col-ow-3">
-            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
-                <h2><a href="#">Necklaces</a></h2>
-                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+        <div class="row-ow flex">
+            <div class="col-ow-3">
+                <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                    <h2><a href="#">Necklaces</a></h2>
+                    <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main3.jpg')}}" alt=""></div></div>
-        <div class="col-ow-3">
-            <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
-                <h2><a href="#">Diamond Chain</a></h2>
-                <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+            <div class="col-ow-3">
+                <div class="box"><img src="{{url_for('static', filename='images/main3.jpg')}}" alt=""></div>
             </div>
-            
-        </div>
-        <div class="col-ow-3"><div class="box"><img src="{{url_for('static', filename='images/main4.jpg')}}" alt=""></div></div>
-    </div>
-</div>
+            <div class="col-ow-3">
+                <div class="collection-info flex flex-dir-column jus-con-cen align-items-center">
+                    <h2><a href="#">Diamond Chain</a></h2>
+                    <a href="#" class='btn'>WIEW DETAILS<i class="fa fa-arrow-right"></i></a>
+                </div>
 
-    
+            </div>
+            <div class="col-ow-3">
+                <div class="box"><img src="{{url_for('static', filename='images/main4.jpg')}}" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+
 </section>
+<section id="newArr">
+    <div class="container-ow">
+        <div class="row-ow">
+            <div class="col-ow-12">
+                <div class="newArr_head flex flex-dir-column align-items-center">
+                    <h1>New Arrivals</h1>
+                    <h3>Just in now</h3>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row-ow flex ">
+            <div class="col-ow-6 flex flex-dir-column flex-wrap">
+                <div class="row-ow flex">
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr1.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">Classic Prong Set Ring Mount </a>
+                                <p>Brand:CaratLane</p>
+                                <span>$199.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
+                    </div>
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr2.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">New Trendy Copper Bangle</a>
+                                <p>Brand:Tradino</p>
+                                <span>$50.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
 
 
+                    </div>
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr3.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">Grooved Texture Gold Bangle Set</a>
+                                <p>Brand:CaratLane</p>
+                                <span>$199.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
 
 
+                    </div>
+                </div>
+                <div class="row-ow flex ">
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr4.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">Classic Prong Set Ring Mount </a>
+                                <p>Brand:CaratLane</p>
+                                <span>$199.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
 
 
+                    </div>
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">Amor Solitaire Ring Mount</a>
+                                <p>Brand:Crocs</p>
+                                <span>$700.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-ow-4 m-t">
+                        <div class="left-item">
+                            <div class="img-frame">
+                                <img src="{{url_for('static', filename='images/newarr1.jpg')}}" alt="">
+                                <div class="left-overlay flex jus-con-cen align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-heart"></i>
+
+                                </div>
+                            </div>
+                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                                <a href="">Lush Ring Mount</a>
+                                <p>Brand:Glamr</p>
+                                <span>$620.00</span>
+                                <div class="stars">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-6 flex flex-dir-column">
+                <div class="right-item">
+                    <div class="img-frame">
+                        <img src="{{url_for('static', filename='images/newarr-bigImage1.jpg')}}" alt="">
+                        <div class="right-overlay">
+                            <img src="{{url_for('static', filename='images/newarr-bigImage2.jpg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="detail-left flex jus-con-betws">
+                        <div class="item-detail flex flex-dir-column jus-con-cen m-t">
+                            <a href="">Let Promise Solitaire Ring Mount</a>
+                            <span>$700.00</span>
+                            <div class="stars">
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+
+                        </div>
+                        <div class="detail-right ">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row-ow flex">
+            <div class="col-ow-4 ">
+                <div class="foot_item">
+                    <div class="img-frame">
+                        <img src="{{url_for('static', filename='images/newarr_ft2.jpg')}}" alt="">
+                        <div class="overlay"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-4">
+                <div class="foot_item">
+                    <div class="img-frame">
+                        <img src="{{url_for('static', filename='images/newarr_ft1.jpg')}}" alt="">
+                        <div class="overlay">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-4">
+                <div class="foot_item">
+                    <div class="img-frame">
+                        <img src="{{url_for('static', filename='images/newarr_ft3.jpg')}}" alt="">
+                        <div class="overlay">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
