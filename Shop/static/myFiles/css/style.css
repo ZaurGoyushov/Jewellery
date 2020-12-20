@@ -62,6 +62,10 @@ table {
           box-sizing: border-box;
 }
 
+.bgcolor {
+  background-color: #6c757d;
+}
+
 .display_block {
   display: block;
 }
@@ -203,7 +207,7 @@ table {
           justify-content: center;
 }
 
-.align-items-center {
+.align-it-cen {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -330,6 +334,7 @@ body {
   background-color: #fff;
   border-radius: 40px;
   padding: 5px;
+  margin-right: 10px;
 }
 
 #header .top_Nav:hover .menu > ul > li > a {
@@ -360,7 +365,10 @@ body {
 }
 
 #header .top_Nav .menu > ul > li {
-  margin-left: 10px;
+  margin-left: 0px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #header .top_Nav .menu > ul > li:hover .mega_subm {
@@ -368,6 +376,9 @@ body {
           transform: scaleY(1);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+  transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   top: 75px;
@@ -478,7 +489,7 @@ body {
 
 #header .top_Nav .menu > ul > li .page {
   left: 0;
-  top: 30px;
+  top: 29px;
   width: 160px;
   padding: 10px 0;
   background-color: #fff;
@@ -887,6 +898,14 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  overflow: hidden;
+}
+
+#newArr .foot_item:hover .overlay {
+  top: 0;
+  left: -160px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
 }
 
 #newArr .foot_item img {
@@ -894,5 +913,195 @@ body {
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#newArr .foot_item .foot_item_info {
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  z-index: 5;
+}
+
+#newArr .foot_item .foot_item_info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#newArr .foot_item .foot_item_info h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#newArr .foot_item .foot_item_info p {
+  font-size: 12px;
+  margin: 10px 0;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#newArr .foot_item .foot_item_info a {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+#newArr .foot_item .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 150%;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 3;
+}
+
+#RareCollections {
+  width: 100%;
+}
+
+#RareCollections .RareCollections_head {
+  width: 100%;
+  height: 160px;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+#RareCollections .RareCollections_head h1 {
+  font-size: 52px;
+  margin: 20px 0;
+}
+
+#RareCollections .rare_item {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+#RareCollections .rare_item:hover .rare_overlay {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+#RareCollections .rare_item img {
+  width: 100%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#RareCollections .rare_item .rare_overlay {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+  width: calc(100% - 20px);
+  height: 320px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#RareCollections .rare_item .rare_overlay a {
+  background-color: #fff;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+}
+
+#footer {
+  width: 100%;
+  height: 400px;
+  background-color: #fafafa;
+  margin-top: 100px;
+}
+
+#footer .footer-info {
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+#footer .footer-info p {
+  text-align: center;
+}
+
+#footer .list_item {
+  margin: 5px;
+}
+
+#footer .list_item i {
+  border: 1px solid gray;
+  padding: 12px;
+}
+
+#footer .list_item i:hover {
+  background-color: #d2aa5c;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#footer .footer_copyright {
+  width: 100%;
+  height: 70px;
+  background-color: #000;
+  margin-top: 30px;
+}
+
+#footer .footer_copyright h1 {
+  font-size: 16px;
+  color: #fff;
+  margin-left: 15px;
+}
+
+#footer .footer_copyright h1 a {
+  color: #fff;
+  margin-left: 2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#footer .footer_copyright h1 a:hover {
+  color: #d2aa5c;
+  text-decoration: none;
+}
+
+#footer .payment {
+  margin-right: 20px;
+}
+
+#footer .payment a {
+  color: #fff;
+}
+
+#footer .payment a i {
+  font-size: 36px;
+  margin: 5px;
+}
+
+#footer .payment a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 /*# sourceMappingURL=style.css.map */

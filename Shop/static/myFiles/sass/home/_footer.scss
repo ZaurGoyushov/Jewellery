@@ -1,0 +1,61 @@
+#footer {
+    width: $main-widht;
+    height: $footer-height;
+    background-color: darken($main-color-white, 2);
+    margin-top: 100px;
+    .footer-info {
+        padding: 20px 10px;
+        margin-top: 40px;
+        p {
+            text-align: center;
+        }
+    }
+    .list_item {
+        margin: 5px;
+        i {
+            border: 1px solid $main-color-gray;
+            padding: 12px;
+            &:hover {
+                background-color: $main-color-gold;
+                color: $main-color-white;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    .footer_copyright {
+        width: $main-widht;
+        height: 70px;
+        background-color: $main-color-black;
+        margin-top: 30px;
+        h1 {
+            font-size: $font-size * 4;
+            color: $main-color-white;
+            margin-left: 15px;
+            a {
+                color: $main-color-white;
+                margin-left: 2px;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    color: $main-color-gold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .payment {
+        margin-right: 20px;
+        a {
+            color: $main-color-white;
+            i {
+                font-size: $font-size * 9;
+                margin: 5px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

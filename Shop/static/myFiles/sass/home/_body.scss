@@ -1,5 +1,6 @@
 #main-section {
     width: $main-widht;
+
     img {
         width: $main-widht;
         height: $main-height;
@@ -180,10 +181,108 @@
         height: $main-height;
         box-sizing: border-box;
         position: relative;
+        overflow: hidden;
+        &:hover {
+            .overlay {
+                top: 0;
+                left: -160px;
+                transform: skewX(-45deg);
+            }
+        }
         img {
             width: $main-widht;
             height: $main-height;
             object-fit: cover;
+        }
+        .foot_item_info {
+            position: absolute;
+            top: 30%;
+            left: 50px;
+            z-index: 5;
+            h3 {
+                font-size: $font-size * 4;
+                margin-bottom: 10px;
+                color: $main-color-white;
+                letter-spacing: 2px;
+            }
+            h1 {
+                font-size: $font-size * 8;
+                margin-bottom: 10px;
+                color: $main-color-white;
+                letter-spacing: 2px;
+            }
+            p {
+                font-size: $font-size * 3;
+                margin: 10px 0;
+                color: $main-color-white;
+                letter-spacing: 2px;
+            }
+            a {
+                font-size: $font-size * 4;
+                margin-top: 20px;
+                color: $main-color-white;
+                letter-spacing: 2px;
+            }
+        }
+        .overlay {
+            background-color: rgba($main-color-black, 0.5);
+            width: $main-widht * 1.5;
+            height: $main-height;
+            position: absolute;
+            top: 0;
+            left: -1000px;
+            transform: skewX(-45deg);
+            transition: all 1s ease;
+            z-index: 3;
+        }
+    }
+}
+#RareCollections {
+    width: $main-widht;
+    .RareCollections_head {
+        width: $main-widht;
+        height: $main-height/2;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        h1 {
+            font-size: $font-size * 13;
+            margin: 20px 0;
+        }
+    }
+    .rare_item {
+        width: $main-widht;
+        height: $main-height;
+        position: relative;
+        &:hover {
+            .rare_overlay {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transform-origin: top;
+            }
+        }
+
+        img {
+            width: $main-widht;
+            height: $main-height;
+            object-fit: cover;
+        }
+        .rare_overlay {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            background-color: rgba($main-color-gray, 0.5);
+            width: calc(#{$main-widht} - 20px);
+            height: $main-height;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: all 0.5s ease;
+            box-sizing: border-box;
+            a {
+                background-color: $main-color-white;
+                color: black;
+                box-sizing: border-box;
+                padding: 5px;
+            }
         }
     }
 }
