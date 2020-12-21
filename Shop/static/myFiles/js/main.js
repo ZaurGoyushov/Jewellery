@@ -1,9 +1,9 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.top = "0";
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      document.querySelector(".top_Nav ").style.backgroundColor = "#6c757d";
     } else {
-      document.getElementById("navbar").style.top = "-50px";
+      document.querySelector(".top_Nav ").style.backgroundColor = "transparent";
     }
   }

@@ -78,7 +78,7 @@
 
         /*hover action*/
         &:hover {
-            background-color: $main-color-darkblue;
+            background-color: $main-color-darkblue !important;
 
             .menu > ul > li {
                 background-color: $main-color-white;
