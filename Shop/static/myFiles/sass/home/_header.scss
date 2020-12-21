@@ -74,7 +74,7 @@
         width: $main-widht;
         background-color: transparent;
         position: fixed;
-        z-index: 2;
+        z-index: 1000;
 
         /*hover action*/
         &:hover {
@@ -124,7 +124,6 @@
                         .mega_subm {
                             transform: scaleY(1);
                             transform-origin: bottom;
-                            transform: scaleY(1);
                             transform-origin: top;
                             transition: all 1s ease;
                             top: 75px;
@@ -155,7 +154,6 @@
                         transform: scaleY(0);
                         transform-origin: top;
                         max-height: $header-height;
-                        
 
                         h3 {
                             color: $main-color-gold;
@@ -175,6 +173,10 @@
 
                                 a {
                                     color: $main-color-gray;
+                                    &:hover {
+                                        color: $main-color-gold;
+                                        transition: all 0.5s ease;
+                                    }
                                 }
                             }
                         }
@@ -283,11 +285,6 @@
                             transition: 0.7s;
                         }
 
-                        .src {
-                            transform: scaleX(1);
-                            transition: 0.7s;
-                        }
-
                         .money {
                             transform: scaleY(1);
                             transition: 0.5s;
@@ -340,23 +337,9 @@
                 }
             }
 
-            .src {
-                width: 250px;
-                background-color: $main-color-white;
-                right: 0;
-                transform: scaleX(0);
-                transform-origin: right;
-                justify-content: end;
-
-                input {
-                    width: $main-widht;
-                    padding: 10px;
-                }
-            }
-
             .money {
                 width: 70px;
-                background-color: $main-color-white;
+                background-color: lighten($main-color-darkblue, 40);
                 transform: scaleY(0);
                 transform-origin: top;
 
@@ -366,7 +349,7 @@
                     text-align: center;
 
                     &:hover {
-                        background-color: $main-color-darkblue;
+                        background-color: $main-color-gold;
                         transition: 0.5s;
                     }
 
@@ -399,5 +382,46 @@
                 }
             }
         }
+    }
+}
+#search_layout {
+    width: $main-widht;
+    height: 100vh;
+    background-color: rgba($main-color-white, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transform: scale(0);
+    transform-origin: right;
+    transition: all 1s ease;
+    .close {
+        margin: 20px;
+        a {
+            font-size: $font-size * 12;
+            font-weight: 900;
+            color: $main-color-black;
+        }
+    }
+    .search {
+        width: $main-widht/2;
+        height: $main-height/4;
+        border-bottom: 2px solid $main-color-black;
+        margin-top: 30vh;
+        box-sizing: border-box;
+
+        input[type="search"] {
+            width: $main-widht;
+            border: none !important;
+            background-color: inherit;
+            font-size: $font-size * 5;
+            font-weight: 500;
+        }
+    }
+    a {
+        font-size: $font-size * 8;
+        color: $main-color-black;
+        margin-left: 10px;
+        cursor: pointer;
     }
 }

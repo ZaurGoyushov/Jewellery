@@ -4,12 +4,16 @@
 .bgcolor{
     background-color: $main-color-darkblue;
 }
+.overflow{
+    overflow: hidden;
+}
 
 .display_block {
     display: block;
 }
 .active {
     color: $main-color-gold;
+    text-decoration: none;
 }
 .position-rel {
     position: relative;

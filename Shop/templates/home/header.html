@@ -1,5 +1,18 @@
 {% block content %}
+<div id="search_layout" class="flex flex-dir-column ">
+  <div class="row-ow">
+    <div class="close" onclick="close()"> <a href="">X</a></div>
+  </div>
+  <div class="container-ow">
+    <div class="row-ow flex jus-con-cen ">
+      <form class="search flex jus-con-cen align-items-center">
+        <input class="boxSz_BorBox" type="search" placeholder="Search....." name="search">
+        <a href=""><span class="fa fa-search" aria-hidden="true"></span></a>
+      </form>
+    </div>
+  </div>
 
+</div>
 <section id="header" class="position-rel">
   <!--slider-->
   <div class="top_S flex position-abs">
@@ -317,12 +330,10 @@
                 </div>
               </li>
               <!--search area-->
-              <li class="position-rel boxSz_BorBox"><a href="#"><span class="fa fa-search"
+              <li class="position-rel boxSz_BorBox" onclick="search()"><a href="#"><span class="fa fa-search"
                     aria-hidden="true"></span></a>
 
-                <form class="src flex position-abs">
-                  <input class="boxSz_BorBox" type="search" placeholder="Search.." name="search">
-                </form>
+
               </li>
               <!--money area-->
               <li class="boxSz_BorBox"><a href="#"><span>USD</span><span class="fa fa-caret-down"
