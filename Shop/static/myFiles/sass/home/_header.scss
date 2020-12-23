@@ -371,12 +371,20 @@
                 li {
                     padding: 10px;
                     margin: 5px;
+                    transition: all 1s ease;
+                    &:hover{
+                         
+                       border:1px solid $main-color-gray;
+                       background-color:lighten($main-color-gold,10);
+                       
+                                             
+                    }
 
                     a {
                         color: $main-color-black;
 
                         &:hover {
-                            color: $main-color-gold;
+                            color: $main-color-white;
                             transition: all 1s ease;
                         }
                     }

@@ -654,6 +654,13 @@ body {
 #header .top_Nav .search .user li {
   padding: 10px;
   margin: 5px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#header .top_Nav .search .user li:hover {
+  border: 1px solid gray;
+  background-color: #ddbf84;
 }
 
 #header .top_Nav .search .user li a {
@@ -661,7 +668,7 @@ body {
 }
 
 #header .top_Nav .search .user li a:hover {
-  color: #d2aa5c;
+  color: #fff;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
