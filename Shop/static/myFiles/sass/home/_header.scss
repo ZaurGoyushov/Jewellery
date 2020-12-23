@@ -323,7 +323,7 @@
             }
 
             .choosen {
-                width: 230px;
+                width: 250px;
                 background-color: $main-color-white;
                 right: 0;
                 padding: 10px 5px;
@@ -366,6 +366,7 @@
                 background-color: $main-color-white;
                 transform: scaleX(0);
                 transform-origin: right;
+                margin-top:-5px;
 
                 li {
                     padding: 10px;

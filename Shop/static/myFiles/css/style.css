@@ -598,7 +598,7 @@ body {
 }
 
 #header .top_Nav .search .choosen {
-  width: 230px;
+  width: 250px;
   background-color: #fff;
   right: 0;
   padding: 10px 5px;
@@ -648,6 +648,7 @@ body {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
+  margin-top: -5px;
 }
 
 #header .top_Nav .search .user li {
