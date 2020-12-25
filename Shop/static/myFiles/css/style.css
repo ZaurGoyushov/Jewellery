@@ -710,10 +710,18 @@ body {
 
 #search_layout .search input[type="search"] {
   width: 100%;
-  border: none !important;
+  border: hidden !important;
   background-color: inherit;
   font-size: 20px;
   font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+
+#search_layout .search input[type="search"]:focus {
+  outline: none;
+  background-color: transparent !important;
 }
 
 #search_layout a {

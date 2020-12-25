@@ -6,18 +6,22 @@ function scrollFunction() {
   } else {
     document.querySelector(".top_Nav ").style.backgroundColor = "transparent";
   }
-};
+}
 
 function search() {
   var srcBtn = document.getElementById('search_layout');
   srcBtn.style.transform = "scale(1)";
   srcBtn.style.transformOrigin = "left";
+  srcBtn.style.transformOrigin = "top right";
 
-};
+}
 
-function close() {
+function cls() {
   var srcBtn = document.getElementById('search_layout');
   srcBtn.style.transform = "scale(0)";
-  srcBtn.style.transformOrigin = "right";
+  srcBtn.style.transformOrigin = "top right";
+  srcBtn.style.transition = "all 2s ease";
+  
+  
 
 }

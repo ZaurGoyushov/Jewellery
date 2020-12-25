@@ -421,10 +421,17 @@
 
         input[type="search"] {
             width: $main-widht;
-            border: none !important;
+            border: hidden !important;
             background-color: inherit;
             font-size: $font-size * 5;
             font-weight: 500;
+            box-sizing: border-box;
+            padding: 10px;
+            &:focus{
+                outline: none;
+                background-color:transparent !important;
+            }
+           
         }
     }
     a {

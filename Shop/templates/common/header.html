@@ -1,13 +1,13 @@
 {% block content %}
 <div id="search_layout" class="flex flex-dir-column ">
   <div class="row-ow">
-    <div class="close" onclick="close()"> <a href="">X</a></div>
+    <div class="close"> <a href="#" onclick="cls()" >X</a></div>
   </div>
   <div class="container-ow">
     <div class="row-ow flex jus-con-cen ">
       <form class="search flex jus-con-cen align-items-center">
         <input class="boxSz_BorBox" type="search" placeholder="Search....." name="search">
-        <a href=""><span class="fa fa-search" aria-hidden="true"></span></a>
+        <a href="#" ><span class="fa fa-search" aria-hidden="true"></span></a>
       </form>
     </div>
   </div>
@@ -306,10 +306,10 @@
               </li>
               <!--necklaces son-->
               <!--pages-->
-              <li class="position-rel"><a href="#"><span>pages</span><span class="fa fa-caret-down"
+              <li class="position-rel" ><a href="#"><span>pages</span><span class="fa fa-caret-down"
                     aria-hidden="true"></span></a>
                 <ul class="page boxSz_BorBox flex flex-dir-column position-abs ">
-                  <li><a href="#">About Us</a></li>
+                  <li ><a href="#">About Us</a></li>
                   <li><a href="#">Contact Us</a></li>
                   <li><a href="#">Blog</a></li>
                 </ul>
@@ -348,8 +348,8 @@
               <!--user area-->
               <li class="position-rel boxSz_BorBox"><a href="#"><span class="fa fa-user" aria-hidden="true"></span></a>
                 <ul class="user position-abs flex flex-dir-column ">
-                  <li class="boxSz_BorBox"><a href="#">Log in</a></li>
-                  <li class="boxSz_BorBox"><a href="#">Creat account</a></li>
+                  <li class="boxSz_BorBox"><a href="/login">Log in</a></li>
+                  <li class="boxSz_BorBox"><a href="/register">Creat account</a></li>
                   <li class="boxSz_BorBox"><a href="#">Wishlist</a></li>
               </li>
             </ul>

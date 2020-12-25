@@ -8,11 +8,11 @@
   {% from "_formhelpers.html" import render_field %}
   <form method="post" enctype="multipart/form-data" class="text-white pt-4  ">
     <div>
-      {{ render_field(form.name ,class='form-control m-t') }}
-      {{ render_field(form.username ,class='form-control m-t') }}
-      {{ render_field(form.email ,class='form-control m-t') }}
-      {{ render_field(form.password ,class='form-control m-t') }}
-      {{ render_field(form.confirm ,class='form-control m-t') }}
+      {{ render_field(form.name ,class='form-control ') }}
+      {{ render_field(form.username ,class='form-control ') }}
+      {{ render_field(form.email ,class='form-control ') }}
+      {{ render_field(form.password ,class='form-control ') }}
+      {{ render_field(form.confirm ,class='form-control ') }}
      
     </div>
     <p><input type=submit value="Register" class="btn btn-success mb-3 ">
