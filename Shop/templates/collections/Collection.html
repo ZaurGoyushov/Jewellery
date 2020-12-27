@@ -1,0 +1,90 @@
+{% extends 'layout.html'%}
+
+
+{% block content %}
+{% include 'common/header.html'%}
+
+<section id="collection">
+    <div class="text-center h1 py-5  m-3 bgcolor2 ">ALL COLLECTIONS</div>
+    <div class="container-ow">
+        <div class="row-ow flex flex-wrap jus-con-arround ">
+            <div class="col-ow-3 m-2 ">
+
+                <div class="collection_items ">
+
+                    <div class="collection_img">
+                        <div class="collection_overlay flex flex-dir-column flex-end align-it-cen"><span>8</span>
+                            <h2>items</h2>
+                        </div>
+                        <img src="{{url_for('static', filename='images/rare4.jpg')}}" alt="">
+                    </div>
+                    <div class="collection_detail">
+                        <a href="">
+                            <h1>RARE COLLECTIONS</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-3 m-2">
+
+                <div class="collection_items ">
+
+                    <div class="collection_img">
+                        <div class="collection_overlay flex flex-dir-column flex-end align-it-cen">
+                            <span>4</span>
+                            <h2>items</h2>
+                        </div>
+                        <img src="{{url_for('static', filename='images/newarr4.jpg')}}" alt="">
+                    </div>
+                    <div class="collection_detail">
+                        <a href="">
+                            <h1>NECKLACES</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-3 m-2">
+
+                <div class="collection_items ">
+
+                    <div class="collection_img">
+                        <div class="collection_overlay flex flex-dir-column flex-end align-it-cen">
+                            <span>7</span>
+                            <h2>items</h2>
+                        </div>
+                        <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
+                    </div>
+                    <div class="collection_detail">
+                        <a href="">
+                            <h1>NEW ARRIVALS</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-ow-3 m-2">
+
+                <div class="collection_items ">
+
+                    <div class="collection_img">
+                        <div class="collection_overlay flex flex-dir-column flex-end align-it-cen">
+                            <span>7</span>
+                            <h2>items</h2>
+                        </div>
+                        <img src="{{url_for('static', filename='images/newarr3.jpg')}}" alt="">
+                    </div>
+                    <div class="collection_detail">
+                        <a href="">
+                            <h1>ORNAMENTS</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'common/footer.html'%}
+
+
+{% endblock content %}

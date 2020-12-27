@@ -20,8 +20,5 @@ function cls() {
   var srcBtn = document.getElementById('search_layout');
   srcBtn.style.transform = "scale(0)";
   srcBtn.style.transformOrigin = "top right";
-  srcBtn.style.transition = "all 2s ease";
-  
-  
-
+  srcBtn.style.transition = "all 0.7s ease";
 }

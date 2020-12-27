@@ -4,6 +4,9 @@
 .bgcolor{
     background-color: $main-color-darkblue;
 }
+.bgcolor2{
+    background-color: $main-color-light;
+}
 .overflow{
     overflow: hidden;
 }
@@ -20,6 +23,9 @@
 }
 .position-abs {
     position: absolute;
+}
+.position-fix{
+    position: fixed;
 }
 
 .box {

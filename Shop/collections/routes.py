@@ -3,15 +3,15 @@ from Shop import app, db ,bcrypt
 
 
 
-@app.route("/collection")
+@app.route("/collections")
 def collection():
-    return render_template('sections/Collection.html')
+    return render_template('collections/Collection.html')
 
 
 
 @app.route("/products")
 def products():
-    return render_template('sections/product.html')
+    return render_template('collections/product.html')
 
 
 

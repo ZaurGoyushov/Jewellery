@@ -101,6 +101,7 @@
             width: $main-widht;
             padding: 5px 20px;
             z-index: 100;
+            margin-bottom: 15px;
 
             a {
                 font-size: $font-size * 5;
@@ -126,12 +127,13 @@
                             transform-origin: bottom;
                             transform-origin: top;
                             transition: all 1s ease;
-                            top: 75px;
+                            top: 77px;
                         }
 
                         .page {
                             transform: scaleY(1);
                             transition: all 1s ease;
+                            
                         }
                     }
 
@@ -231,7 +233,7 @@
 
                     .page {
                         left: 0;
-                        top: 29px;
+                        top: 33px;
                         width: 160px;
                         padding: 10px 0;
                         background-color: $main-color-white;
@@ -240,7 +242,10 @@
 
                         li {
                             padding: 10px 10px;
-                            transition: all 1s;
+                            transition: all 1s ease;
+                            &:hover{
+                                background-color: darken($main-color-white,20);
+                            }
 
                             a {
                                 color: $main-color-black;
@@ -249,6 +254,7 @@
                                 &:hover {
                                     color: $main-color-gold;
                                     text-decoration: underline;
+                                    
                                 }
                             }
                         }

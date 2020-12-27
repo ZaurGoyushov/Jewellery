@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 
-
 {% block content %}
+{% include 'common/header.html'%}
 
-<div class="text-center h1">Login</div>
+
+<div class="text-center h1 py-5  m-3 bgcolor2">Login</div>
 <div class="container  d-flex ">
     <div class="col-4"> {% include '_messages.html'%} </div>
     <div class="col-4 bg-secondary ">
@@ -21,5 +22,7 @@
 </div>
 <div class="col-4"></div>
 </div>
+
+{% include 'common/footer.html'%}
 
 {% endblock content %}
