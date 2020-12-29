@@ -1,3 +1,4 @@
+//Event:scroll  style to Nav
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -7,6 +8,9 @@ function scrollFunction() {
     document.querySelector(".top_Nav ").style.backgroundColor = "transparent";
   }
 }
+//end of Event:scroll  style to Nav
+
+//Event:click  search layout
 
 function search() {
   var srcBtn = document.getElementById('search_layout');
@@ -16,14 +20,18 @@ function search() {
 
 }
 
+
 function cls() {
   var srcBtn = document.getElementById('search_layout');
   srcBtn.style.transform = "scale(0)";
   srcBtn.style.transformOrigin = "top right";
   srcBtn.style.transition = "all 0.7s ease";
 }
+//Event:click  search layout
 
 
+
+//Event:scroll
 var btnScrollTop=document.querySelector("#btnScrTop");
 window.addEventListener("scroll",function(){
       let ms=window.scrollY;
@@ -42,7 +50,7 @@ btnScrollTop.addEventListener("click",function(){
     behavior:"smooth"
   })
 })
-
+//end of Event:scroll
 
 
 

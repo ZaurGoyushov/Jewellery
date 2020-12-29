@@ -181,6 +181,7 @@
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
+        cursor: pointer;
         &:hover {
             .overlay {
                 top: 0;
@@ -221,6 +222,9 @@
                 margin-top: 20px;
                 color: $main-color-white;
                 letter-spacing: 2px;
+                &:hover{
+                    color: $main-color-gold;
+                }
             }
         }
         .overlay {
@@ -265,6 +269,7 @@
             height: $main-height;
             object-fit: cover;
         }
+        
         .rare_overlay {
             position: absolute;
             top: 0;
@@ -276,12 +281,23 @@
             transform-origin: top;
             transition: all 0.5s ease;
             box-sizing: border-box;
+            cursor: pointer;
             a {
                 background-color: $main-color-white;
                 color: black;
                 box-sizing: border-box;
                 padding: 5px;
+                &:hover{
+                    background-color: $main-color-gold;
+                }
             }
+        }
+    }
+    h1{
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover{
+            color:$main-color-gold;
         }
     }
 }
