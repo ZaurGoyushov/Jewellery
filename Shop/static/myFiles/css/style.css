@@ -691,6 +691,7 @@ body {
   transition: all 1s ease;
 }
 
+/*Search layout codes*/
 #search_layout {
   width: 100%;
   height: 100vh;
@@ -749,6 +750,29 @@ body {
   cursor: pointer;
 }
 
+/*End of Search layout codes*/
+/*Scroll UP codes*/
+#btnScrTop {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: red;
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 10000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+/*ENd Scroll UP codes*/
 #main-section {
   width: 100%;
 }

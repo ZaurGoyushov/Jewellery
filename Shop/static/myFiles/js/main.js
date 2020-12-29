@@ -22,3 +22,28 @@ function cls() {
   srcBtn.style.transformOrigin = "top right";
   srcBtn.style.transition = "all 0.7s ease";
 }
+
+
+var btnScrollTop=document.querySelector("#btnScrTop");
+window.addEventListener("scroll",function(){
+      let ms=window.scrollY;
+      if(ms>350){
+        btnScrollTop.style.display="flex";
+      }
+      else{
+        btnScrollTop.style.display="none";
+      }
+
+});
+btnScrollTop.addEventListener("click",function(){
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:"smooth"
+  })
+})
+
+
+
+
+

@@ -399,6 +399,8 @@
         }
     }
 }
+
+/*Search layout codes*/
 #search_layout {
     width: $main-widht;
     height: 100vh;
@@ -447,3 +449,28 @@
         cursor: pointer;
     }
 }
+/*End of Search layout codes*/
+
+/*Scroll UP codes*/
+
+#btnScrTop{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    color:$main-color-white;
+    background-color: red;
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    
+}
+
+
+
+/*ENd Scroll UP codes*/
