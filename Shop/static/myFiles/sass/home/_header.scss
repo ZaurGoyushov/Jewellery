@@ -121,7 +121,9 @@
                     padding-right: 10px;
                     box-sizing: border-box;
 
+
                     &:hover {
+                        background-color: $main-color-gold;
                         .mega_subm {
                             transform: scaleY(1);
                             transform-origin: bottom;
@@ -151,11 +153,12 @@
                     .mega_subm {
                         width: $main-widht;
                         left: 0;
-                        background-color: $main-color-white;
+                        background-color: darken($main-color-white,1);
                         flex-wrap: wrap;
                         transform: scaleY(0);
                         transform-origin: top;
                         max-height: $header-height;
+                        box-shadow: 0 0 30px 0 rgba(0,0,0,0.15);
 
                         h3 {
                             color: $main-color-gold;
@@ -164,6 +167,7 @@
                             text-transform: uppercase;
                             text-align: center;
                             margin: 30px;
+                            
                         }
 
                         ul {

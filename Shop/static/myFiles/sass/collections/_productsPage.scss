@@ -1,0 +1,151 @@
+#product {
+    width: $main-widht;
+    .navBar {
+        width: $main-widht;
+        box-sizing: border-box;
+
+        padding: 20px;
+        h1 {
+            font-size: $font-size * 8;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        ul {
+            min-width: $main-widht;
+            border-bottom: 1px $main-color-gray solid;
+            box-sizing: border-box;
+            padding-bottom: 50px;
+            padding-left: 20px;
+            margin-bottom: 50px;
+            li {
+                width: inherit;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                a {
+                    color: $main-color-black;
+                    cursor: pointer;
+                    margin: 5px;
+                    &:hover {
+                        color: $main-color-gold;
+                        transition: 0.8s;
+                    }
+                }
+                span {
+                    cursor: pointer;
+                }
+            }
+        }
+        .Size {
+            li {
+                border: 1px solid $main-color-gray;
+                box-sizing: border-box;
+                padding: 8px;
+                margin: 5px;
+                &:hover {
+                    border: 1px solid $main-color-gold;
+                    cursor: pointer;
+                    a {
+                        color: $main-color-gold;
+                    }
+                }
+            }
+        }
+    }
+    .product_lists {
+        width: $main-widht;
+        box-sizing: border-box;
+        .btnProductList {
+            width: $main-widht/4;
+            margin-top: 50px;
+
+            i {
+                margin: 5px;
+                font-size: $font-size * 5;
+                border: 1px solid $main-color-gray;
+                box-sizing: border-box;
+                padding: 10px;
+                background-color: $main-color-white;
+                color: $main-color-black;
+                margin-bottom: 40px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $main-color-black;
+                    color: $main-color-white;
+                }
+            }
+        }
+        .product_filter {
+            width: $main-widht;
+            margin-top: 50px;
+            h4 {
+                margin-right: 20px;
+                font-size: $font-size * 5;
+            }
+            ul {
+                width: $main-widht/3;
+
+                li {
+                    width: $main-widht;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid $main-color-gray;
+                    transform: translateY(-15px);
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        background-color: $main-color-gold;
+                        cursor: pointer;
+                        a {
+                            color: $main-color-white;
+                        }
+                    }
+                    a {
+                        color: $main-color-black;
+                        font-size: $font-size * 5.5;
+                    }
+                }
+            }
+        }
+
+        .left-item {
+            width: $main-widht;
+            min-height: $main-height;
+            box-sizing: border-box;
+            position: relative;
+            margin-top: 50px;
+
+            &:hover {
+                .item-detail a {
+                    color: $main-color-gold;
+                }
+            }
+            .img-frame {
+                img {
+                    width: $main-widht;
+                    height: $main-height;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+            .item-detail {
+                cursor: pointer;
+                a,
+                p {
+                    color: $main-color-black;
+                    margin: 5px;
+                }
+                span {
+                    color: lighten($main-color-black, 70);
+                    margin: 5px;
+                }
+                .stars {
+                    & > span {
+                        color: $main-color-black;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
