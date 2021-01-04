@@ -54,4 +54,39 @@ btnScrollTop.addEventListener("click",function(){
 
 
 
+//change bigImage
+var zoom=document.querySelector(".zoom");
+var image=document.querySelector(".bigImage");
+var smallImage=document.querySelectorAll(".subImage img");
+
+smallImage.forEach(function(el){
+    el.addEventListener('click',function(){
+    var imageName= el.getAttribute('src').split('/')[3];
+    image.style.backgroundImage= `url(static/images/${imageName}`;
+      
+  })
+  })
+  //zoom effect
+  image=document.querySelector(".bigImage");
+  image.addEventListener('mousemove',function(e){
+  let width =image.offsetWidth;
+  let height =image.offsetHeight;
+  let mouseX=e.offsetX;
+  let mouseY=e.offsetY;
+  let bigPosX=(mouseX / width*100);
+  let bigPosY=(mouseY / height*100);
+  zoom.classList.add("bigImage");
+  zoom.style.backgroundSize="250%";
+  zoom.style.backgroundPosition=image.style.backgroundPosition=`${bigPosX}% ${bigPosY}%`;
+})
+ 
+  image.addEventListener("mouseleave",function(){
+  image.style.backgroundPosition="center";
+})
+//end of zoom effect
+  
+
+
+
+
 
