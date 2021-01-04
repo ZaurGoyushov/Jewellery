@@ -9,10 +9,14 @@ def collection():
 
 
 
-@app.route("/products")
-def products():
-    return render_template('collections/product.html')
+@app.route("/allproducts")
+def Allproducts():
+    return render_template('collections/AllProducts.html')
 
+
+@app.route("/product")
+def product():
+    return render_template('collections/product.html')
 
 
 

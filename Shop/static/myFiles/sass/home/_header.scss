@@ -124,6 +124,11 @@
 
                     &:hover {
                         background-color: $main-color-gold;
+                        &:nth-child(1){
+                            background-color: $main-color-white !important;
+                            
+
+                        }
                         .mega_subm {
                             transform: scaleY(1);
                             transform-origin: bottom;
