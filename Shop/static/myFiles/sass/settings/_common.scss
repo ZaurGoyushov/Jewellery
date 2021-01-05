@@ -18,6 +18,9 @@
     color: $main-color-gold;
     text-decoration: none;
 }
+.active_border{
+    border:2px solid $main-color-gold !important;
+}
 .position-rel {
     position: relative;
 }

@@ -25,9 +25,6 @@
             left:95%;
             z-index: 100;
             visibility: hidden;
-
-
-
         }
     }
     .subImage{
@@ -41,5 +38,90 @@
             background-size: cover;
             margin-right:10px;
         }
+    }
+    .Product_info{
+        width: $main-widht;
+        h1{
+            width: $main-widht;
+            margin:30px 0 10px 5px;
+        }
+        span{
+            font-size:$font-size*6;
+            font-weight: 700;
+            margin:5px 0px 5px 5px
+        }
+        .stars{
+            margin:5px;
+            span{
+                font-size: $font-size*4;
+                font-weight: 300;
+            }
+
+        }
+        p{
+            margin:20px 0 0 5px;
+        }
+    }
+    .Product_detail{
+        width: $main-widht/1.6;
+        label{
+            font-size: $font-size*4;
+            font-weight: 750;
+            margin-top: 5px;
+        }
+        span{
+            font-size: $font-size*4;
+            font-weight: 350;
+        }
+        .size{
+            label{
+                margin:15px 235px 0 0 ;
+            }
+            span{
+                border:1px solid $main-color-gray;
+                display: block;
+                padding:10px;
+                margin-left:5px; 
+            }
+        }
+        .material{
+            label{
+                margin-top:20px;
+            }
+            span{
+                display:block;
+                padding: 10px 15px;
+                margin-right: 44px;
+            }
+        }
+        .quantity{
+            label{
+                margin:15px 200px 0 0;
+
+            }
+            span{
+                display:block;
+                box-sizing: border-box;
+                padding: 5px 10px;
+                border:1px solid $main-color-gray;
+            }
+        }
+        .total{
+            margin-top:10px;
+            span{
+                font-size: $font-size*5;
+                font-weight: 750;
+                margin-right: 60px;
+            }
+        }
+    }
+    .product_btn{
+        width: $main-widht/2;
+        margin-top:30px;
+        .btn{
+            margin:10px;
+            cursor: pointer;
+        }
+        
     }
 }
