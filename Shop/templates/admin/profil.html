@@ -1,11 +1,412 @@
 {% extends 'layout.html'%}
 
-
 {% block content %}
-{% include 'common/header.html'%}
+<!--Search layout-->
+<div id="search_layout" class="flex flex-dir-column ">
+  <div class="row-ow">
+    <div class="close"> <a href="#" onclick="cls()">X</a></div>
+  </div>
+  <div class="container-ow">
+    <div class="row-ow flex jus-con-cen ">
+      <form class="search flex jus-con-cen align-items-center">
+        <input class="boxSz_BorBox" type="search" placeholder="Search....." name="search">
+        <a href="#"><span class="fa fa-search" aria-hidden="true"></span></a>
+      </form>
+    </div>
+  </div>
+</div>
+<!--End Search layout-->
+<!--ScrollUp button-->
+<div id="btnScrTop">UP</div>
+<!--END ScrollUp button-->
+
+<section id="header" class="position-rel " style="background-color:#6c757d;height: 120px;">
+  <!--slider-->
+  
+  <!-- Nav logo-->
+  <div class="top_Nav flex boxSz_BorBox">
+    <div class="container-ow">
+      <div class="row-ow flex">
+        <div class="col-2 flex  align-it-cen">
+          <div class="logo boxSz_BorBox position-abs">
+
+            <a href="/">
+              <font style="color:blue">JE</font>
+              <font style="color:red">WELL</font>
+              <font style="color:green">ERY</font>
+            </a>
+          </div>
+        </div>
+        <!-- Nav megamenu-->
+        <div class="col-7">
+          <div class="menu flex  boxSz_BorBox">
+            <ul class=" flex jus-con-cen align-items-center  ">
+              <li><a href="/"><span class="active">Home</span></a></li>
+              <!--collection -->
+              <li><a href="/collections"><span>Collection</span><span class="fa fa-caret-down"
+                    aria-hidden="true"></span></a>
+                <div class="mega_subm flex position-abs">
+                  <div class="col-3">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!--collection son-->
+              <!--Jewel-->
+              <li><a href="/allproducts"><span>Jewel</span><span class="fa fa-caret-down" aria-hidden="true"></span< /a>
+                    <div class="mega_subm position-abs flex">
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <a href="/allproducts">
+                            <h3>bangle sets</h3>
+                          </a>
+                          <ul>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <a href="/allproducts">
+                            <h3>bangle sets</h3>
+                          </a>
+                          <ul>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <a href="/allproducts">
+                            <h3>bangle sets</h3>
+                          </a>
+                          <ul>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <a href="/allproducts">
+                            <h3>bangle sets</h3>
+                          </a>
+                          <ul>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                            <li><a href="/product">Jewel</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="row-ow flex jus-con-cen align-items-center">
+                          <div class="col-6 flex jus-con-cen">
+                            <div class="sub_menu_img boxSz_BorBox">
+                              <a href="/product"><img src="{{url_for('static', filename='images/submenu1.png')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                          <div class="col-6 flex jus-con-cen">
+                            <div class="sub_menu_img boxSz_BorBox">
+                              <a href="/product"><img src="{{url_for('static', filename='images/submenu2.png')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </li>
+              <!--jewel son-->
+              <!--rings -->
+              <li><a href="/allproducts"><span>Rings</span><span class="fa fa-caret-down" aria-hidden="true"></span< /a>
+                    <div class="mega_subm position-abs flex">
+                      <div class="col-3 ">
+                        <div class="row-ow">
+                          <div class="ring boxSz_BorBox flex flex-dir-column jus-con-cen align-items-center">
+                            <a href="/allproducts">
+                              <h3>bangle sets</h3>
+                            </a>
+                            <div class="row-ow">
+                              <a href="/product"><img src="{{url_for('static', filename='images/ring1.jpg')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <div class="ring boxSz_BorBox flex flex-dir-column jus-con-cen align-items-center">
+                            <a href="/allproducts">
+                              <h3>bangle sets</h3>
+                            </a>
+                            <div class="row">
+                              <a href="/product"><img src="{{url_for('static', filename='images/ring2.jpg')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <div class="ring boxSz_BorBox flex flex-dir-column jus-con-cen align-items-center">
+                            <a href="/allproducts">
+                              <h3>bangle sets</h3>
+                            </a>
+                            <div class="row-ow">
+                              <a href="/product"><img src="{{url_for('static', filename='images/ring3.jpg')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="row-ow">
+                          <div class="ring boxSz_BorBox flex flex-dir-column jus-con-cen align-items-center">
+                            <a href="/allproducts">
+                              <h3>bangle sets</h3>
+                            </a>
+                            <div class="row-ow">
+                              <a href="/product"><img src="{{url_for('static', filename='images/ring4.jpg')}}"
+                                  alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </li>
+              <!--rings son-->
+              <!--necklaces-->
+              <li><a href="/allproducts"><span>Necklaces</span><span class="fa fa-caret-down"
+                    aria-hidden="true"></span></a>
+                <div class="mega_subm position-abs flex">
+                  <div class="col-2">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="row-ow">
+                      <a href="/allproducts">
+                        <h3>bangle sets</h3>
+                      </a>
+                      <ul>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                        <li><a href="/product">Jewel</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="row-ow flex jus-con-cen align-items-center">
+                      <div class="necklace boxSz_BorBox ">
+                        <a href="/product"><img src="{{url_for('static', filename='images/neck1.jpg')}}" alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!--necklaces son-->
+              <!--pages-->
+              <li class="position-rel"><a href="#"><span>pages</span><span class="fa fa-caret-down"
+                    aria-hidden="true"></span></a>
+                <ul class="page boxSz_BorBox flex flex-dir-column position-abs ">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </li>
+              <!--pages son-->
+            </ul>
+          </div>
+        </div>
+        <!--search basket user  area-->
+        <div class="col-3">
+          <div class="search boxSz_BorBox">
+            <ul class="flex align-items-center ">
+              <!--basket area-->
+              <li class="position-rel boxSz_BorBox"><a class="basket" href="#"><span class="fa fa-shopping-basket"
+                    aria-hidden="true"></span><span class="counter position-abs">0</span></a>
+                <div class="choosen position-abs">
+                  <p>Your cart is currently empty</p>
+                </div>
+              </li>
+              <!--search area-->
+              <li class="position-rel boxSz_BorBox" onclick="search()"><a href="#"><span class="fa fa-search"
+                    aria-hidden="true"></span></a>
+
+
+              </li>
+              <!--money area-->
+              <li class="boxSz_BorBox"><a href="#"><span>USD</span><span class="fa fa-caret-down"
+                    aria-hidden="true"></span></a>
+                <ul class="money position-abs flex flex-dir-column jus-con-cen align-items-center ">
+                  <li><a href="#">EUR</a></li>
+                  <li><a href="#">AZN</a></li>
+                  <li><a href="#">RUB</a></li>
+                  <li><a href="#">GBR</a></li>
+                </ul>
+              </li>
+              <!--user area-->
+              <li class="position-rel boxSz_BorBox"><a href="#"><span class="fa fa-user" aria-hidden="true"></span></a>
+                <ul class="user position-abs flex flex-dir-column ">
+                  <li class="boxSz_BorBox"><a href="/login">Log in</a></li>
+                  <li class="boxSz_BorBox"><a href="/register">Creat account</a></li>
+                  <li class="boxSz_BorBox"><a href="#">Wishlist</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
 <section id="profil">
-    
+    <div class="container-ow">
+        
+    </div>
     
 </section>
 

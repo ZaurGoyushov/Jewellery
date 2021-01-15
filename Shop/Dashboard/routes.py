@@ -4,9 +4,15 @@ from .forms import RegistrationForm,LoginForm
 from .models import User
 import os
 
+@app.route("/profil")
+def profil():
+    return render_template('admin/profil.html')
+
 @app.route("/")
 def home():
     return render_template('admin/index.html')
+
+
 
 @app.route("/body")
 def header():
