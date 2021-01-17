@@ -28,7 +28,13 @@ function cls() {
   srcBtn.style.transition = "all 0.7s ease";
 }
 //Event:click  search layout
+//Event:click  User layout
+function Update() {
+  var Update = document.getElementById('Update');
+  var UserUpdateTable=document.querySelector(".UpdateUser")
+  UserUpdateTable.style.display = "block";
 
+}
 
 
 //Event:scroll

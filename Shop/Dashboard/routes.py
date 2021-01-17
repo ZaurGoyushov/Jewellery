@@ -41,12 +41,30 @@ def login():
          if user and bcrypt.check_password_hash (user.password , form.password.data):
             session['email']= form.email.data
             flash(f'welcome {form.email.data} you are logedin now','succes')
-            return redirect(url_for('home'))
+            return redirect(url_for('profil'))
          else:
           flash('Wrong Password try again','danger')      
      return render_template('admin/login.html', form=form,title='login page')
 
+@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+def UserDelete(id):
+    user=User.query.get(id)
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for('users'))
 
+@app.route('/admin/users/<int:id>', methods=['GET', 'POST'])
+def UserUpdate(id):
+    if request.method=="post":
+        return redirect(url_for('users'))
+    else:
+        users=User.query.get(id)
+        return render_template("admin/user.html",user=users)
+        return redirect(url_for('users'))
+
+           
+            
+         
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
