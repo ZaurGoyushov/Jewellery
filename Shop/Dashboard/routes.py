@@ -1,11 +1,18 @@
 from flask import  render_template, session, request, redirect, url_for,flash
 from Shop import app, db ,bcrypt
 from .forms import RegistrationForm,LoginForm
-from .models import User
+from .models import User,Products
 import os
 
-@app.route("/profil")
+@app.route("/profil", methods=['GET', 'POST'])
 def profil():
+    if request.method == 'POST':
+        Product=Products(ProductName=request.form['ProductName'],Brand=request.form['Brand'],
+        Price=request.form['Price'],ProductInfo=request.form['info'])
+        db.session.add(Product)
+        db.session.commit()
+        db.create_all()
+        return redirect('/')
     return render_template('admin/profil.html')
 
 @app.route("/")
@@ -14,9 +21,10 @@ def home():
 
 
 
-@app.route("/body")
-def header():
-    return render_template('home/body.html')
+@app.route("/body",methods=['GET', 'POST'])
+def body():
+    AllData=Products.query.all()
+    return render_template('home/body.html',All=AllData)
          
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -24,7 +32,7 @@ def register():
     form = RegistrationForm(request.form)
     if request.method == 'POST' and form.validate():
         Hash_password = bcrypt.generate_password_hash(form.password.data)
-        New_user = User(name=form.name.data, username=form.username.data,email=form.email.data,
+        New_user = User(name=form.name.data, username=form.username.data, email=form.email.data,
                    password=Hash_password)
         db.session.add(New_user)
         db.session.commit()

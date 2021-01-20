@@ -20,7 +20,7 @@
 <div id="btnScrTop">UP</div>
 <!--END ScrollUp button-->
 
-<section id="header" class="position-rel " style="background-color:#6c757d;height: 120px;">
+<section id="header" style="background-color:#6c757d;height: 120px">
   <!--slider-->
   
   <!-- Nav logo-->
@@ -405,7 +405,34 @@
 
 <section id="profil">
     <div class="container-ow">
-             <h1>this is profil page</h1>
+             <div class="container-ow">
+               <div class="row-ow">
+                 <div class="col-8 offset-2 mt-5">
+                  <form action="/profil" method="POST">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Product Name</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" name="ProductName">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Brand</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Brand" name="Brand">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Price</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Price" name="Price">
+                    </div>
+                   
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Example textarea</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="info"></textarea>
+                    </div>
+
+                    <button class="btn btn-success">ADD</button>
+                  </form>
+                  
+                 </div>
+               </div>
+             </div>
              
     </div>
     

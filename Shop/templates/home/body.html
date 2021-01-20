@@ -68,10 +68,11 @@
                                     <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            {% for product in All %}
                             <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Classic Prong Set Ring Mount </a>
-                                <p>Brand:CaratLane</p>
-                                <span>$199.00</span>
+                                <a href="">{{product.ProductName}}</a>
+                                <p>Brand: {{product.Brand}} </p>
+                                <span>$ {{product.Price}} </span>
                                 <div class="stars">
                                     <span><i class="fa fa-star"></i></span>
                                     <span><i class="fa fa-star"></i></span>
@@ -81,6 +82,7 @@
                                 </div>
 
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col-ow-4 m-t">
