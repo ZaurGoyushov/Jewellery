@@ -1,7 +1,10 @@
 {% extends 'layout.html' %}
 
-{% block content %}
 
+
+
+{% block content %}
+{% include 'common/header.html'%}
 <section id="main-section">
     <div class="container-ow ">
         <div class="row-ow flex ">
@@ -70,9 +73,9 @@
                             </div>
                             {% for product in All %}
                             <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">{{product.ProductName}}</a>
-                                <p>Brand: {{product.Brand}} </p>
-                                <span>$ {{product.Price}} </span>
+                                <a href="">{{product.products_ProductName}}</a>
+                                <p>Brand: {{product.products_Brand}} </p>
+                                <span>$ {{product.products_Price}} </span>
                                 <div class="stars">
                                     <span><i class="fa fa-star"></i></span>
                                     <span><i class="fa fa-star"></i></span>
@@ -398,5 +401,5 @@
         </div>
     </div>
 </section>
-
+{% include 'common/footer.html'%}
 {% endblock content %}

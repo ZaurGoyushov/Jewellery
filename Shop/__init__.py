@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,blueprints
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_migrate import Migrate,MigrateCommand
@@ -13,4 +13,6 @@ manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
 from .Dashboard import routes
-from .collections import routes
+from .collection import routes
+from .auth import routes
+from .Profile import routes

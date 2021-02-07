@@ -1,5 +1,11 @@
 from flask import  render_template, session, request, redirect, url_for,flash
-from Shop import app, db ,bcrypt
+import os,sys
+from os.path import dirname,abspath
+d=dirname(dirname(abspath(__file__)))
+sys.path.append(d)
+from Shop import db,app
+
+
 
 
 

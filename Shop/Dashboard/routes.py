@@ -1,58 +1,25 @@
-from flask import  render_template, session, request, redirect, url_for,flash
+from flask import  render_template, session, request, redirect, url_for,flash,session
+import os,sys
+from os.path import dirname,abspath
+d=dirname(dirname(abspath(__file__)))
+sys.path.append(d)
 from Shop import app, db ,bcrypt
-from .forms import RegistrationForm,LoginForm
-from .models import User,Products
-import os
-
-@app.route("/profil", methods=['GET', 'POST'])
-def profil():
-    if request.method == 'POST':
-        Product=Products(ProductName=request.form['ProductName'],Brand=request.form['Brand'],
-        Price=request.form['Price'],ProductInfo=request.form['info'])
-        db.session.add(Product)
-        db.session.commit()
-        db.create_all()
-        return redirect('/')
-    return render_template('admin/profil.html')
-
-@app.route("/")
-def home():
-    return render_template('admin/index.html')
+from auth.forms import RegistrationForm,LoginForm
+from Dashboard.models import User
+from collection.models import Category,Brand
+from Profile.models import Products
+from collection.forms import AddBrandForm,AddCategoryForm
 
 
 
-@app.route("/body",methods=['GET', 'POST'])
-def body():
+
+@app.route("/",methods=['GET', 'POST'])
+def index():
     AllData=Products.query.all()
-    return render_template('home/body.html',All=AllData)
-         
+    return render_template('home/index.html',All=AllData)
+       
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
-        Hash_password = bcrypt.generate_password_hash(form.password.data)
-        New_user = User(name=form.name.data, username=form.username.data, email=form.email.data,
-                   password=Hash_password)
-        db.session.add(New_user)
-        db.session.commit()
-        db.create_all()
-        flash(f'Welcome {form.name.data} Lets login','success')
-        return redirect(url_for('login'))
-    return render_template('admin/register.html', form=form,title='Registration page')
- 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-     form = LoginForm(request.form)
-     if request.method == 'POST' and form.validate():
-         user = User.query.filter_by(email = form.email.data).first()
-         if user and bcrypt.check_password_hash (user.password , form.password.data):
-            session['email']= form.email.data
-            flash(f'welcome {form.email.data} you are logedin now','succes')
-            return redirect(url_for('profil'))
-         else:
-          flash('Wrong Password try again','danger')      
-     return render_template('admin/login.html', form=form,title='login page')
+
 
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def UserDelete(id):
@@ -84,6 +51,44 @@ def admin():
 @app.route('/admin/users', methods=['GET', 'POST'])
 def users():
     user_info=User.query.all()
-
+    
     return render_template('admin/user.html', table_info = user_info ,title='Users')
+
+@app.route('/admin/Category', methods=['GET', 'POST'])
+def Categories():
+    cats=Category.query.all()
+    
+    return render_template('admin/Category.html',cats=cats )
+
+@app.route('/admin/brand', methods=['GET', 'POST'])
+def brand():
+    brand=Brand.query.all()
+
+    return render_template('admin/brand.html', brand = brand )
+
+
+@app.route('/admin/addBrand', methods=['GET', 'POST'])
+def AddBrand():
+    form=AddBrandForm()
+    if form.validate_on_submit():
+        New_Brand = Brand(BrandName=form.name.data)
+        db.session.add(New_Brand)
+        db.session.commit()
+        db.create_all()
+        return redirect("addBrand")
+    return render_template('admin/AddBrand.html', form=form)
+
+@app.route('/admin/AddCat', methods=['GET', 'POST'])
+def AddCat():
+    form=AddCategoryForm(request.form)
+    brand=Brand.query.all()
+    if request.method == 'POST':
+        
+        New_Cat = Category(CategoryName=form.name.data,brand_id=request.form.get('Brand'))
+        db.session.add(New_Cat)
+        db.session.commit()
+        db.create_all()
+        return redirect("AddCat")
+
+    return render_template('admin/AddCategory.html', form=form,brand=brand)
     

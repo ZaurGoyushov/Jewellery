@@ -1,0 +1,65 @@
+{% extends 'admin.html' %}
+{% include 'layout.html' %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-4">
+      <form class="UpdateUser">
+
+       <div class="form-group">
+        <label for="exampleInputPassword1">Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name" name="name" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" >
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      
+        
+        <button  type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Category Name</th>
+        <th scope="col">Brand Name</th>
+        <th scope="col">Brand Id</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for cat in cats %}
+      <tr>
+        <th scope="row">{{cat.Category_id}}</th>
+        <td>{{cat.CategoryName}}</td>
+        <td>{{cat.brand.BrandName}}</td>
+        <td>{{cat.brand_id}}</td>
+        
+        <td>
+        <!-- Example single danger button -->
+        <div class="btn-group">
+        <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action
+        </button>
+        <div class="dropdown-menu">
+         <a class="dropdown-item" id="Update" href="#" onclick="Update()">Update</a>
+         <a class="dropdown-item" href="#" >Delete</a>
+         </div>
+         </div>
+        </td>
+      </tr>
+
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  {% endblock content %}
