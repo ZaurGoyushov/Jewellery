@@ -397,12 +397,21 @@
                 </ul>
               </li>
               <!--user area-->
+              {% if current_user.is_authenticated %}
+              <li class="position-rel boxSz_BorBox"><a href="#"><span >{{current_user.name}}</span></a>
+                <ul class="user position-abs flex flex-dir-column ">
+                  <li class="boxSz_BorBox"><a href="/logout">Logout</a></li>
+                  <li class="boxSz_BorBox"><a href="/profil">Profile</a></li>
+                  
+              {% else%}
               <li class="position-rel boxSz_BorBox"><a href="#"><span class="fa fa-user" aria-hidden="true"></span></a>
                 <ul class="user position-abs flex flex-dir-column ">
                   <li class="boxSz_BorBox"><a href="/login">Log in</a></li>
                   <li class="boxSz_BorBox"><a href="/register">Creat account</a></li>
                   <li class="boxSz_BorBox"><a href="#">Wishlist</a></li>
               </li>
+              {% endif %}
+
             </ul>
           </div>
         </div>

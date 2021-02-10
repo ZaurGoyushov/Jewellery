@@ -1,4 +1,5 @@
-from flask import  render_template, session, request, redirect, url_for,flash,session
+from flask import  render_template, session, request, redirect, url_for,flash,session,abort
+from flask_login import login_user,current_user,logout_user,login_required
 import os,sys
 from os.path import dirname,abspath
 d=dirname(dirname(abspath(__file__)))
@@ -41,10 +42,15 @@ def UserUpdate(id):
             
          
 
-@app.route('/admin', methods=['GET', 'POST'])
+@app.route('/admin')
+@login_required
 def admin():
-
-    return render_template('/admin.html')
+    if current_user.email == "zaur.gyshv@gmail.com":
+        return redirect("/admin/users")
+    else:
+        abort(403)
+    return render_template ('admin.html')
+        
 
 
 
@@ -70,25 +76,28 @@ def brand():
 @app.route('/admin/addBrand', methods=['GET', 'POST'])
 def AddBrand():
     form=AddBrandForm()
-    if form.validate_on_submit():
+    if request.method=="POST":
         New_Brand = Brand(BrandName=form.name.data)
         db.session.add(New_Brand)
         db.session.commit()
         db.create_all()
+        flash(f'THE {form.name.data} ADDED','success')
         return redirect("addBrand")
     return render_template('admin/AddBrand.html', form=form)
 
 @app.route('/admin/AddCat', methods=['GET', 'POST'])
 def AddCat():
-    form=AddCategoryForm(request.form)
+    form=AddCategoryForm()
     brand=Brand.query.all()
-    if request.method == 'POST':
+    if request.method=="POST":
         
         New_Cat = Category(CategoryName=form.name.data,brand_id=request.form.get('Brand'))
         db.session.add(New_Cat)
         db.session.commit()
         db.create_all()
+        flash(f'THE {form.name.data} ADDED','success')
         return redirect("AddCat")
+        
 
     return render_template('admin/AddCategory.html', form=form,brand=brand)
     

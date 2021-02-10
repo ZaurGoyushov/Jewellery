@@ -1,0 +1,48 @@
+{% extends 'customer/profile.html'%}
+{% include 'layout.html' %}
+
+{% block content %}
+<!--Search layout-->
+
+
+<section id="profil">
+    
+             <div class="container bg-success">
+               <div class="row">
+                 <div class="col-10 offset-2 m-5">
+                  <form action="/AddProduct" method="POST">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">PRODUCT NAME</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name" name="ProductName">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">BRAND</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Brand" name="Brand">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">PRICE</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Price" name="Price">
+                    </div>
+                   
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1 " class=" m-2 text-white">EXAMPLE TEXTAREA</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="info"></textarea>
+                    </div>
+
+                    <button class="btn btn-warning">ADD</button>
+                  </form>
+                  <div class="col-4 mt-4"> {% include '_messages.html'%} </div>
+                  
+                 </div>
+               </div>
+             </div>
+             
+    
+    
+</section>
+
+
+
+
+
+{% endblock content %}
