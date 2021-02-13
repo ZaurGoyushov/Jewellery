@@ -12,11 +12,18 @@ from collection.models import Category,Brand
 
 
 class Products(db.Model):
-    products_Product_id = db.Column(db.Integer, primary_key=True)
-    products_ProductName = db.Column(db.String(30),  nullable=False)
-    products_Brand = db.Column(db.String(80),  nullable=False)
-    products_Price = db.Column(db.String(120), nullable=False)
-    products_ProductInfo = db.Column(db.String(120), nullable=False)
-    products_ProductImage= db.Column(db.String(120), nullable=False)
-    cat_id=db.Column(db.Integer,db.ForeignKey('category.Category_id'), nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    ProductName = db.Column(db.String(30),  nullable=False)
+    Size = db.Column(db.String(80),  nullable=False)
+    Color = db.Column(db.String(80),  nullable=False)
+    Price = db.Column(db.String(120), nullable=False)
+    ProductInfo = db.Column(db.String(120), nullable=False)
+    Material = db.Column(db.String(120), nullable=False)
+    Stock = db.Column(db.String(60), nullable=False)
+    ProductImage_1= db.Column(db.String(120), nullable=False)
+    ProductImage_2= db.Column(db.String(120))
+    cat_id= db.Column(db.Integer,db.ForeignKey('category.Category_id'), nullable=False)
+    brand_id= db.Column(db.Integer,db.ForeignKey('brand.Brand_id'), nullable=False)
     user_id=db.Column(db.Integer,db.ForeignKey('user.id'), nullable=False)
+
+    

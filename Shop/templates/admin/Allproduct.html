@@ -1,0 +1,62 @@
+{% extends 'admin.html' %}
+{% include 'layout.html' %}
+
+
+{% block content %}
+
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Size</th>
+        <th scope="col">color</th>
+        <th scope="col">Material</th>
+        <th scope="col">Stock</th>
+        <th scope="col">CategoryName</th>
+        <th scope="col">BrandName</th>
+        <th scope="col">Seller</th>
+        <th scope="col">image_1</th>
+        <th scope="col">image_2</th>
+
+
+
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in pro %}
+      <tr>
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.ProductName}}</td>
+        <td>{{product.Size}}</td>
+        <td>{{product.Color}}</td>
+        <td>{{product.Material}}</td>
+        <td>{{product.Stock}}</td>
+        <td>{{ product.cat_id }}</td>
+        <td>{{ product.brand_id }}</td>
+        <td>{{ product.user.name }}</td>
+        <td><img src="{{url_for('static', filename='photo/' + product.ProductImage_1)}}" width="50" height="40"</td>
+        <td><img src="{{url_for('static', filename='photo/' + product.ProductImage_2)}}" width="50" height="40"</td>
+       
+        
+        <td>
+        <!-- Example single danger button -->
+        <div class="btn-group">
+        <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action
+        </button>
+        <div class="dropdown-menu">
+         <a class="dropdown-item" id="Update" href="">Update</a>
+         <a class="dropdown-item" href="/deleteProduct/{{product.Product_id}}" >Delete</a>
+         </div>
+         </div>
+        </td>
+      </tr>
+
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  {% endblock content %}

@@ -1,10 +1,10 @@
-{% extends 'admin.html' %}
+{% extends 'customer/profile.html' %}
 {% include 'layout.html' %}
 
 
 {% block content %}
 
-<div class="container">
+<!--<div class="container">
   <div class="row">
     <div class="col-6 offset-4">
       <form class="UpdateUser">
@@ -25,21 +25,29 @@
     </div>
   </div>
 </div>
+//-->
 
 <table class="table table-sm table-dark">
     <thead>
       <tr>
         <th scope="col">id</th>
-        <th scope="col">Brand Name</th>
-        
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      {% for br in brand %}
+      {% if user %}
       <tr>
-        <th scope="row">{{br.Brand_id}}</th>
-        <td>{{br.BrandName}}</td>
-        
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.Phone}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
         <td>
         <!-- Example single danger button -->
         <div class="btn-group">
@@ -47,14 +55,15 @@
         Action
         </button>
         <div class="dropdown-menu">
-         <a class="dropdown-item" id="Update" href="#" onclick="Update()">Update</a>
-         <a class="dropdown-item" href="#" >Delete</a>
+         <a class="dropdown-item" id="" href="/profil/updateAcc/{{current_user.id}}">Update</a>
+         
          </div>
          </div>
         </td>
       </tr>
 
-      {% endfor %}
+
+      {% endif %}
       
     </tbody>
   </table>

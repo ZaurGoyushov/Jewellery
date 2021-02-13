@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container">
+<!--<div class="container">
   <div class="row">
     <div class="col-6 offset-4">
       <form class="UpdateUser">
@@ -25,6 +25,7 @@
     </div>
   </div>
 </div>
+//-->
 
 <table class="table table-sm table-dark">
     <thead>
@@ -52,7 +53,7 @@
         Action
         </button>
         <div class="dropdown-menu">
-         <a class="dropdown-item" id="Update" href="#" onclick="Update()">Update</a>
+         <a class="dropdown-item" id="" href="/updateUser/{{user.id}}">Update</a>
          <a class="dropdown-item" href="/delete/{{user.id}}" >Delete</a>
          </div>
          </div>

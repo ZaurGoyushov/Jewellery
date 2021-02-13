@@ -12,11 +12,9 @@
                 <div class="col-ow-12 ">
                     <h1>Category</h1>
                     <ul class="ml-3 mt-3">
-                        <li><a href="">Braslate</a> <span>+</span></li>
-                        <li><a href="">Bangles</a></li>
-                        <li><a href="">Rings</a> <span>+</span> </li>
-                        <li><a href="">Necklace Set</a> <span>+</span> </li>
-                        <li><a href="">Bridal Set</a></li>
+                        {% for cat in cats %}
+                        <li><a href="">{{cat.CategoryName}}</a> <span></span>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-ow-12 ">
@@ -35,15 +33,10 @@
                 <div class="col-ow-12 ">
                     <h1>Shop By Brand</h1>
                     <ul class="ml-3 mt-3">
-                        <li><a href="">Croces</a></li>
-                        <li><a href="">Caratlane</a></li>
-                        <li><a href="">Glamr</a></li>
-                        <li><a href="">Tradino</a></li>
-                        <li><a href="">Nakshi</a></li>
-                        <li><a href="">Maribel</a></li>
-                        <li><a href="">Latika</a></li>
-
-
+                        {% for brand in brands %}
+                        <li><a href="#">{{brand.BrandName}}</a></li>
+                        {% endfor %}
+                        
                     </ul>
                 </div>
                 <div class="col-ow-12 ">
@@ -99,15 +92,16 @@
                     </div>
                 </div>
                 <div class="row-ow flex flex-wrap ">
+                    {% for prod in pro %}
                     <div class="col-ow-3 m-4">
                         <div class="left-item">
                             <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
+                                <a href="/product/{{prod.id}}"> <img src="{{url_for('static', filename='photo/'+prod.ProductImage_1)}}" alt=""></a>
                             </div>
                             <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
+                                <a href="/product/{{prod.id}}">{{prod.ProductName}}</a>
+                                <p>{{prod.brand_id}}</p>
+                                <span>${{prod.Price}}</span>
                                 <div class="stars">
                                     <span><i class="fa fa-star"></i></span>
                                     <span><i class="fa fa-star"></i></span>
@@ -118,82 +112,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-ow-3 m-4">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-3 m-4">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-3 m-4">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-3 m-4">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    
                 </div>
 
 

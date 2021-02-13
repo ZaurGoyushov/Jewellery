@@ -1,0 +1,36 @@
+{% extends 'admin.html' %}
+{% include 'layout.html' %}
+
+{% block content %}
+
+
+
+<div class="text-center h1 py-5  m-3 bgcolor2">Add New Brand</div>
+<div class="container  d-flex ">
+    <div class="col-4"> {% include '_messages.html'%} </div>
+    <div class="col-4 bg-secondary ">
+  {% from "_formhelpers.html" import render_field %}
+  <form method="POST" enctype="multipart/form-data" class="text-white pt-4  ">
+    {{ form.hidden_token }}
+    {% if Category %}
+    <div>
+      {{ render_field(form.name ,class='form-control ' , value=Category.CategoryName)}}
+      <label for="Brand">Brand</label>
+      <select name="Brand" id="Brand" class="form-control mb-3" required>
+      <option value=" ">{{Category.brand.BrandName}}</option>
+      {% for br in brand %}
+      <option value=" {{ br.Brand_id }} ">{{br.BrandName}}</option>
+      {% endfor %}
+      
+
+    </div>
+    {% endif %}
+   
+    <p><input type=submit value="UpdateCat" class="btn btn-warning mb-3 ">
+  </form>
+</div>
+<div class="col-4"></div>
+</div>
+
+
+{% endblock content %}

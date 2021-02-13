@@ -8,20 +8,26 @@
     <div class="text-center h4 py-5  m-3 bgcolor2 ">SELECTED PRODUCT ITEM</div>
     <div class="container-ow">
         <div class="row-ow flex">
+             {% if data %}
+            
+            
+            
+            
             <div class="col-ow-6 flex flex-dir-column ">
-                <div class="bigImage flex jus-con-cen">
-                   <div class="zoom"></div>
+                <div class="bigImage flex jus-con-cen" style="background-image: url( {{url_for('static', filename='photo/'+ data.ProductImage_1 )}}) ;">
+                    
+                   <div class="zoom" style="background-image: url( {{url_for('static', filename='photo/'+ data.ProductImage_1 )}}) ;"></div>
                    
                 </div>
                 <div class="subImage flex ">
-                    <img  src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                    <img  src="{{url_for('static', filename='images/newarr6.jpg')}}" alt="">
+                    <img  src="{{url_for('static', filename='photo/'+ data.ProductImage_1 )}}" alt="">
+                    <img  src="{{url_for('static', filename='photo/'+ data.ProductImage_2 )}}" alt="">
                 </div>
             </div>
             <div class="col-ow-6 flex flex-dir-column">
                 <div class="Product_info">
-                    <h1>Amor Solitaire Ring Mount</h1>
-                <span class="active">$900.00</span>
+                    <h1>{{data.ProductName}}</h1>
+                <span class="active">${{data.Price}}</span>
                 <div class="stars">
                     <span><i class="fa fa-star"></i></span>
                     <span><i class="fa fa-star"></i></span>
@@ -31,29 +37,29 @@
                     <span>1 review</span>
 
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat...</p>
+                <p>{{data.ProductInfo}}</p>
                  <div class="Product_detail">
                      <p class="flex jus-con-betws">
                          <label>Brand:</label>
-                         <span>Tradino</span>
+                         <span>{{data.brand_id}}</span>
                      </p>
                      <p class="flex jus-con-betws">
                         <label>Movement:</label>
-                        <span>Bangles</span>
+                        <span>{{data.cat_id}}</span>
                     </p>
                     <p class="flex jus-con-betws">
                         <label>Availability:</label>
-                        <span><font style="color:green">Many In Stock</font></span>
+                        <span><font style="color:green">{{data.Stock}}</font></span>
                     </p>
                     <p class="size flex ">
                         <label>Size:</label>
-                        <span class="active_border">2.5</span>
+                        <span class="active_border">{{data.Size}}</span>
                         <span>3.5</span>
                         <span>4.5</span>
                     </p>
                     <p class=" material flex jus-con-betws">
                         <label>MATERIAL:</label>
-                        <span class="active_border">Copper</span>
+                        <span class="active_border">{{data.Material}}</span>
                     </p>
                     <p class=" quantity flex ">
                         <label>Quantity:</label>
@@ -63,7 +69,11 @@
                     </p>
                     <p class="total flex jus-con-betws">
                         <label>Total:</label>
-                        <span class="active ">$50.00</span>
+                        <span class="active ">${{data.Price}}</span>
+                    </p>
+                    <p class=" material flex jus-con-betws">
+                        <label>Phone Number:</label>
+                        <span class="active_border">+994{{data.user.Phone}}</span>
                     </p>
                  </div>
                  <div class="product_btn flex flex-wrap">
@@ -74,6 +84,7 @@
                 </div>
                 
             </div>
+            {% endif  %}
         </div>
         <div class="row-ow">
             

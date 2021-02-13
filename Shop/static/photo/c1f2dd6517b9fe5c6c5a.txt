@@ -1,0 +1,18 @@
+                                         papka yaratmaq ve oxumaq emrleri
+cd -----daxilolmaq(cd desktop)
+mkdir ----yeni papka yaratmaq
+dir ----yaratdigin papkalari gormek
+
+
+
+                                         Virtualenv yaratmaq emrleri
+pip install virtualenv -----virtual env yuklemek
+python -m virtualenv zaur(name of your venv) --------isdediyin adda env yaratmaq(layihe folderinin icinde yaradilmalidi)
+zaur\Scripts\activate ----- envye daxil olur
+                   
+
+                                          flask vve Sqlalchemy yuklemek
+
+pip install flask (envye daxil olub sora yuklemek lazimdir)
+pip install flask-SQLALchemy
+code -----virtualstudio

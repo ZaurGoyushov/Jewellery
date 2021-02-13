@@ -68,8 +68,8 @@ var smallImage=document.querySelectorAll(".subImage img");
 smallImage.forEach(function(el){
     el.addEventListener('click',function(){
     var imageName= el.getAttribute('src').split('/')[3];
-    image.style.backgroundImage= `url(static/images/${imageName}`;
-    zoom.style.backgroundImage= `url(static/images/${imageName}`;  
+    image.style.backgroundImage= `url(/static/photo/${imageName}`;
+    zoom.style.backgroundImage= `url(/static/photo/${imageName}`;  
   })
   })
   //zoom effect

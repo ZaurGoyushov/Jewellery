@@ -1,0 +1,25 @@
+{% extends 'admin.html' %}
+{% include 'layout.html' %}
+
+{% block content %}
+<div class="text-center h1 py-5  m-3 bgcolor2">Update form</div>
+<div class="container bg-secondary">
+  {% from "_formhelpers.html" import render_field %}
+ 
+  <form method="POST" enctype="multipart/form-data" class="text-white pt-4  ">
+    {{ form.csrf_token }}
+    {% if users %}
+    <div>
+        {{ render_field(form.name ,class='form-control', value=users.name) }}
+        {{ render_field(form.username ,class='form-control',value=users.username) }}
+        {{ render_field(form.Phone ,class='form-control ',value=users.Phone) }}
+        <input type="file" name="photo">
+       
+      </div>
+    
+  {% endif %}
+    <p><input type="submit" value="Update" class="btn btn-warning mb-3 mt-2 ">
+  </form>
+</div>
+
+{% endblock content %}

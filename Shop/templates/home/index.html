@@ -60,22 +60,26 @@
             </div>
         </div>
         <div class="row-ow flex ">
-            <div class="col-ow-6 flex flex-dir-column flex-wrap">
-                <div class="row-ow flex">
+            <div class="col-ow-6 ">
+                <div class="row-ow flex flex-wrap">
+                    {% for pro in All %}
                     <div class="col-ow-4 m-t">
                         <div class="left-item">
                             <div class="img-frame">
-                               <a href="/product"> <img src="{{url_for('static', filename='images/newarr1.jpg')}}" alt=""></a>
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
+                               <a href="/product/{{pro.id}}"> <img src="{{url_for('static', filename='photo/'+pro.ProductImage_1)}}" alt=""></a>
+                                <a href="/product/{{pro.id}}">
+                                    <div class="left-overlay flex jus-con-cen align-items-center">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <i class="fa fa-heart"></i>
+                                    </div>
+                                </a>
+                               
                             </div>
-                            {% for product in All %}
+                            
                             <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">{{product.products_ProductName}}</a>
-                                <p>Brand: {{product.products_Brand}} </p>
-                                <span>$ {{product.products_Price}} </span>
+                                <a href="/product/{{pro.id}}">{{pro.ProductName}}</a>
+                                <p>Brand: {{pro.brand_id}} </p>
+                                <span>$ {{pro.Price}} </span>
                                 <div class="stars">
                                     <span><i class="fa fa-star"></i></span>
                                     <span><i class="fa fa-star"></i></span>
@@ -85,126 +89,10 @@
                                 </div>
 
                             </div>
-                            {% endfor %}
+                            
                         </div>
                     </div>
-                    <div class="col-ow-4 m-t">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr2.jpg')}}" alt="">
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">New Trendy Copper Bangle</a>
-                                <p>Brand:Tradino</p>
-                                <span>$50.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-4 m-t">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr3.jpg')}}" alt="">
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Grooved Texture Gold Bangle Set</a>
-                                <p>Brand:CaratLane</p>
-                                <span>$199.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-ow flex ">
-                    <div class="col-ow-4 m-t">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr4.jpg')}}" alt="">
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Classic Prong Set Ring Mount </a>
-                                <p>Brand:CaratLane</p>
-                                <span>$199.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-4 m-t">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr5.jpg')}}" alt="">
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Amor Solitaire Ring Mount</a>
-                                <p>Brand:Crocs</p>
-                                <span>$700.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-ow-4 m-t">
-                        <div class="left-item">
-                            <div class="img-frame">
-                                <img src="{{url_for('static', filename='images/newarr1.jpg')}}" alt="">
-                                <div class="left-overlay flex jus-con-cen align-items-center">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="item-detail flex flex-dir-column jus-con-cen m-t">
-                                <a href="">Lush Ring Mount</a>
-                                <p>Brand:Glamr</p>
-                                <span>$620.00</span>
-                                <div class="stars">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-ow-6 flex flex-dir-column">

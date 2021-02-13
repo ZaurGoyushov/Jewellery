@@ -1,0 +1,99 @@
+{% extends 'customer/profile.html'%}
+{% include 'layout.html' %}
+
+{% block content %}
+<!--Search layout-->
+
+
+<section id="profil">
+    
+             <div class="container bg-success">
+               <div class="row ">
+                 <div class="col-10 offset-2 m-5 ">
+                   
+                   
+                   
+                   
+                  <form  method="POST" class="flex" enctype="multipart/form-data">
+                    {% if pro %}
+                    <div class="col-5">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white" >Product Name</label>
+                      <input type="text" class="form-control" value="{{pro.ProductName}}" id="exampleFormControlInput1" placeholder="Product Name" name="ProductName" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="Brand">Brand</label>
+                       <select name="Brand" id="Brand" class="form-control mb-3" required>
+                        <option value=" {{pro.brand_id}}">{{pro.brand_id}}</option>
+                            {% for br in brand %}
+                           <option value="{{br.BrandName}} ">{{br.BrandName}}</option>
+                             {% endfor %}
+      
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="Cat">Category</label>
+                      <select name="Cat" id="Cat" class="form-control mb-3" required>
+                         <option value="{{pro.cat_id}}">{{pro.cat_id}}</option>
+                           {% for cats in cat %}
+                          <option value="{{cats.CategoryName}}">{{cats.CategoryName}}</option>
+                            {% endfor %}
+     
+                     </select>
+                   </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">PRICE</label>
+                      <input type="text" value="{{pro.Price}}"class="form-control" id="exampleFormControlInput1" required  placeholder="Price" name="Price">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">SIZE</label>
+                      <input type="text" value="{{pro.Size}}"class="form-control" id="exampleFormControlInput1" required placeholder="Size" name="Size">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1 " class=" m-2 text-white">IMAGE_1</label>
+                      <input type="file"  id="image_1"  name="image_1" value="{{pro.ProductImage_1}}" ></input>
+                    </div>
+                    
+                  </div>
+                  <div class="col-5">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">COLOR</label>
+                      <input type="text" value="{{pro.Color}}"class="form-control" id="exampleFormControlInput1" required placeholder="Color" name="Color">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">STOCK</label>
+                      <input type="text" value="{{pro.Stock}}"class="form-control" id="exampleFormControlInput1" required placeholder="Stock" name="Stock">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1" class=" m-2 text-white">MATERIAL</label>
+                      <input type="text" value="{{pro.Material}}" class="form-control" id="exampleFormControlInput1" required placeholder="Material" name="Material">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1 " class=" m-2 text-white">EXAMPLE TEXTAREA</label>
+                      <textarea class="form-control"  id="exampleFormControlTextarea1" required rows="3" name="info">{{pro.ProductInfo}}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1 "  class=" m-2 text-white">IMAGE_2</label>
+                      <input type="file"  id="image_2" value="{{pro.ProductImage_2}}" name="image_2" ></input>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-warning m-2 ">Update</button>
+                  </div>
+                  {% endif %}
+                  </form>
+                  
+                  <div class="col-4 mt-4"> {% include '_messages.html'%} </div>
+                  
+                 </div>
+               </div>
+             </div>
+             
+    
+    
+</section>
+
+
+
+
+
+{% endblock content %}
